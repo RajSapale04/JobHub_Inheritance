@@ -3,11 +3,21 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  background-image: url("your_background_image.jpg"); /* Replace with the path to your background image */
+  background-color: whitesmoke;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: black; /* Set text color for better contrast on the background */
+}
+
+.bg-color {
+  position: absolute;
+  z-index: -1;
+  width: 1519.2px;
+  height: 940px;
+  margin: 0px;
+  margin-top: 800px;
+  margin-bottom: 50px;
 }
 
 header {
@@ -30,7 +40,7 @@ header {
   margin-left: 130px;
   font-size: 1.3em;
   color: hsl(235, 18%, 80%);
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   align-items: flex-start;
   position: absolute;
 }
@@ -42,19 +52,19 @@ header {
 .navbar {
   width: 60%;
   align-items: flex-end;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 nav ul {
   list-style: none;
   display: flex;
   margin-left: 300px; /* Move the navigation to the right */
   align-items: flex-end;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 nav ul li {
   margin: 40px; /* Adjust spacing between buttons */
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 nav a {
@@ -72,7 +82,7 @@ nav a {
   background-color: hsl(235, 18%, 70%);
   color: hsl(235, 18%, 26%);
   text-decoration: none;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 490;
   padding: 10px 20px;
   border: none;
@@ -89,7 +99,7 @@ main {
   text-align: center;
   margin-bottom: 40px;
   margin-left: 100px;
-  max-width: 60%;
+  max-width: 100%;
 }
 .hero h1 {
   font-size: 4em;
@@ -98,7 +108,8 @@ main {
   line-height: 125%;
   margin-bottom: 30px;
   font-weight: bolder;
-  color: hsl(235, 18%, 15%);
+  color: hsl(235, 18%, 26%);
+  font-family: "Roboto", sans-serif;
 }
 
 .hero p {
@@ -109,6 +120,13 @@ main {
 }
 .emphasized-text {
   color: hsl(235, 18%, 60%);
+}
+
+.bg-jobs {
+  height: 550px;
+  position: relative;
+  float: right;
+  margin-right: 0px;
 }
 
 .icon-user {
@@ -128,7 +146,7 @@ main {
 .search-bar {
   display: flex;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 130px;
 }
 
 .search-container {
@@ -207,13 +225,15 @@ footer {
   padding-top: 10px;
 }
 .jobs {
-  box-shadow: 3px 3px 3px 3px hsl(235, 18%, 85%);
+  box-shadow: 2px 4px 2px hsl(235, 18%, 85%);
   width: 80%;
   margin: auto;
   margin-top: 100px;
   align-content: center;
   padding-top: 20px;
   padding-bottom: 20px;
+  background-color: white;
+  border-radius: 5px;
 }
 .marketing {
   margin: 30px;
@@ -244,4 +264,130 @@ footer {
   margin-left: 10px;
   text-align: left;
   padding-right: 20px;
+  color: rgb(173, 173, 173);
+}
+
+.featured-jobs {
+  margin-top: 75px;
+}
+.featured {
+  width: 350px;
+  border-radius: 3px;
+  padding: 15px 10px;
+  box-shadow: 2px 1px 2px 2px hsl(235, 18%, 85%);
+  display: inline-block;
+  margin-left: 90px;
+  margin-bottom: 50px;
+  background-color: white;
+}
+
+.featured-jobs h1 {
+  font-size: 45px;
+  text-align: center;
+  margin-bottom: 70px;
+  color: hsl(235, 18%, 90%);
+}
+
+.featured-icon {
+  height: 40px;
+  box-shadow: 2px 3px hsl(235, 18%, 85%);
+  padding: 5px;
+  border-radius: 10px;
+  float: left;
+  margin-right: 20px;
+  margin-left: 5px;
+}
+
+.featured h3 {
+  margin: 0px;
+  width: 200px;
+  display: inline-block;
+  margin-top: 5px;
+}
+.featured p {
+  margin: 0px;
+  margin-top: 5px;
+
+  color: rgb(188, 188, 188);
+}
+
+.featured-button {
+  padding: 10px 12px;
+  box-shadow: 2px 3px hsl(235, 18%, 85%);
+  border: 0px;
+  border-radius: 3px;
+  background-color: hsl(235, 18%, 98%);
+  margin: 5px;
+  font-weight: 600;
+  position: absolute;
+  margin-top: 30px;
+}
+
+.featured h4 {
+  margin-bottom: auto;
+  margin-top: 40px;
+  text-align: right;
+  padding-right: 10px;
+  font-size: 17px;
+}
+.more-jobs {
+  padding: 10px 25px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: hsl(235, 18%, 80%);
+  color: hsl(235, 18%, 26%);
+  border: 0px;
+  border-radius: 3px;
+  text-align: center;
+  position: relative;
+  margin-left: 680px;
+  box-shadow: 2px 1px hsl(235, 18%, 85%);
+}
+.learn-more {
+  margin-top: 120px;
+}
+.learn-more h1 {
+  font-size: 50px;
+  margin-left: 600px;
+  margin-top: 0px;
+  color: hsl(235, 18%, 26%);
+  margin-bottom: 35px;
+}
+.about {
+  margin-bottom: 20px;
+  margin-left: 100px;
+  padding: 10px 25px;
+  font-size: 17px;
+  font-weight: 600;
+  background-color: hsl(235, 18%, 80%);
+  color: hsl(235, 18%, 26%);
+  border: 0px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.learn-more p {
+  margin-left: 600px;
+  font-size: 20px;
+  color: hsl(235, 18%, 55%);
+}
+.learn-more i {
+  margin-right: 10px;
+}
+.learn {
+  margin-bottom: 20px;
+  margin-top: 40px;
+  margin-left: 100px;
+  padding: 10px 25px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: hsl(235, 18%, 30%);
+  color: hsl(235, 18%, 80%);
+  border: 0px;
+  border-radius: 6px;
+  text-align: center;
+}
+.bg-learn {
+  height: 500px;
+  float: left;
 }
