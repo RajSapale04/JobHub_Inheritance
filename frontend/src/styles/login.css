@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+/* 
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+    background: hsl(235, 18%, 26%);
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/illustration-sign-up-desktop.svg") center/cover no-repeat;
+    opacity: 1;
+
+    z-index: -1;
+    scale: 75%;
+
+    width: 500px;
+    height: 700px;
+    margin-left: 300px;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 260px;
+    width: 67%;
+    height: 100%;
+    background: white;
+    opacity: 1;
+
+    z-index: -2;
+   
+    scale: 85%;
+    border-radius: 20px;
+} */
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    background-color: hsl(235, 18%, 80%);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s ease-in-out;
+    margin-right: 390px;
+    /* Adjust the right margin as needed */
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+/* Rest of the styles remain the same */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-family: "Roboto", sans-serif;
+    margin-top: 10px;
+    color: #333;
+}
+
+input {
+    font-family: "Roboto", sans-serif;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #27ae60;
+}
+
+button {
+    font-family: "Roboto", sans-serif;
+    background: hsl(4, 100%, 67%);
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(45deg, rgb(248, 188, 5), hsl(4, 100%, 67%));
+}
+
+/* Updated styles for the login message */
+.message {
+    margin-top: 15px;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+}
+
+.message.error {
+    background-color: #e74c3c;
+}
+
+.message.success {
+    background-color: #27ae60;
+}
+
+.google-login {
+    margin-top: 15px;
+    text-align: center;
+    color: #333;
+}
+
+.back-to-login {
+    margin-top: 15px;
+    color: #333;
+    text-align: center;
+}
+
+.back-to-login a {
+    font-family: "Roboto", sans-serif;
+    color: hsl(4, 100%, 67%);
+    text-decoration: underline;
+
+    transition: color 0.3s;
+    align-items: center;
+}
+
+/* h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700px;
+    margin-right: 500px;
+    color: hsl(234, 29%, 20%);
+    scale: 140%;
+} */
+
+.signup-link {
+    align-content: center;
+    margin-left: 30px;
+}
