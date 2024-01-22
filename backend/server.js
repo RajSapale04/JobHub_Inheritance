@@ -7,14 +7,17 @@ const CompanyRoutes = require('./routes/companies')
 
 const app = express()
 
-
-
+const mongoose = require('mongoose');
+const db = 'mongodb+srv://Vedant:Vedant@03@jobhub.shufb5z.mongodb.net/database?retryWrites=true&w=majority';
+mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true});
+   .then((result) => {
+     app.listen(process.env.PORT,()=>{
+         console.log('listening on port 3000')
+     })
+    .catch(err) => console.log(err) 
+  }
+  
 
 app.get('/',(req,res)=>{
     res.json({mssg:'Welcome to the app'})
-})
-
-
-app.listen(process.env.PORT,()=>{
-    console.log('listening on port 3000')
 })
