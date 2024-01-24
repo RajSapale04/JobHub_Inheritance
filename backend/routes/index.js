@@ -15,10 +15,4 @@ router.get('/',(req,res)=>{
     res.json({mssg:'Welcome to the app'})
 })
 
-
-
-
-
-
-
 module.exports = router
