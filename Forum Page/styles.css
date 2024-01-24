@@ -1,0 +1,234 @@
+.forum-UI-design {
+    background-color: var(--dark-2);
+    height: 1060px;
+    position: relative;
+    width: 1440px;
+  }
+  
+  .forum-UI-design .main {
+    height: 950px;
+    left: 40px;
+    position: absolute;
+    top: 100px;
+    width: 1360px;
+  }
+  
+  .forum-UI-design .header {
+    align-items: flex-start;
+    background-color: var(--dark-3);
+    display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
+    left: 0;
+    padding: 20px 22px;
+    position: absolute;
+    top: 0;
+  }
+  
+  .forum-UI-design .main-2 {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 84px;
+    position: relative;
+    width: 1360px;
+  }
+  
+  .forum-UI-design .div-2 {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    position: relative;
+  }
+  
+  .forum-UI-design .logo {
+    flex: 0 0 auto;
+    position: relative;
+  }
+  
+  .forum-UI-design .hipnode {
+    color: var(--redred-90);
+    font-family: var(--bold-26-font-family);
+    font-size: var(--bold-26-font-size);
+    font-style: var(--bold-26-font-style);
+    font-weight: var(--bold-26-font-weight);
+    letter-spacing: var(--bold-26-letter-spacing);
+    line-height: var(--bold-26-line-height);
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .forum-UI-design .main-3 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 17px;
+    margin-right: -37px;
+    position: relative;
+  }
+  
+  .forum-UI-design .icons {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 20px;
+    position: relative;
+  }
+  
+  .forum-UI-design .home {
+    align-items: flex-start;
+    background-color: var(--redred);
+    border-radius: 7px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    padding: 10px;
+    position: relative;
+  }
+  
+  .forum-UI-design .icon-instance-node {
+    height: 20px !important;
+    position: relative !important;
+    width: 20px !important;
+  }
+  
+  .forum-UI-design .home-wrapper {
+    align-items: flex-start;
+    background-color: var(--dark-3);
+    border-radius: 7px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    padding: 10px;
+    position: relative;
+  }
+  
+  .forum-UI-design .group-instance {
+    background-color: var(--secondary-colorsecondary-6) !important;
+  }
+  
+  .forum-UI-design .design-component-instance-node {
+    border-color: var(--dark-3) !important;
+  }
+  
+  .forum-UI-design .search {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 58px;
+    justify-content: flex-end;
+    position: relative;
+  }
+  
+  .forum-UI-design .title-wrapper {
+    align-items: flex-start;
+    background-color: var(--dark-4);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 9px 20px;
+    position: relative;
+    width: 440px;
+  }
+  
+  .forum-UI-design .title {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 240px;
+    position: relative;
+  }
+  
+  .forum-UI-design .type-here-to-search {
+    background: transparent;
+    border: none;
+    color: var(--secondary-colorsecondary-4);
+    font-family: var(--regular-14-font-family);
+    font-size: var(--regular-14-font-size);
+    font-style: var(--regular-14-font-style);
+    font-weight: var(--regular-14-font-weight);
+    letter-spacing: var(--regular-14-letter-spacing);
+    line-height: var(--regular-14-line-height);
+    margin-top: -1px;
+    padding: 0;
+    position: relative;
+    width: 140px;
+  }
+  
+  .forum-UI-design .search-icon {
+    height: 20.5px !important;
+    margin-right: -0.5px !important;
+    position: relative !important;
+    width: 20.5px !important;
+  }
+  
+  .forum-UI-design .right-info {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 25px;
+    position: relative;
+  }
+  
+  .forum-UI-design .div-3 {
+    align-items: flex-start;
+    background-color: var(--dark-4);
+    border-radius: 7px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    padding: 10px;
+    position: relative;
+  }
+  
+  .forum-UI-design .name {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 16px;
+    position: relative;
+  }
+  
+  .forum-UI-design .profile-image {
+    border: 1px solid;
+    border-color: var(--yellowyellow);
+    border-radius: 8px;
+    height: 40px;
+    position: relative;
+    width: 40px;
+  }
+  
+  .forum-UI-design .mask-group-wrapper {
+    background-color: var(--yellowyellow-30);
+    border-radius: 6px;
+    height: 34px;
+    left: 3px;
+    position: relative;
+    top: 3px;
+    width: 34px;
+  }
+  
+  .forum-UI-design .mask-group {
+    height: 32px;
+    left: 2px;
+    position: absolute;
+    top: 1px;
+    width: 30px;
+  }
+  
+  .forum-UI-design .text-wrapper {
+    color: var(--secondary-colorbackground-2);
+    font-family: var(--bold-16-font-family);
+    font-size: var(--bold-16-font-size);
+    font-style: var(--bold-16-font-style);
+    font-weight: var(--bold-16-font-weight);
+    letter-spacing: var(--bold-16-letter-spacing);
+    line-height: var(--bold-16-line-height);
+    position: relative;
+    width: 71px;
+  }
+  
