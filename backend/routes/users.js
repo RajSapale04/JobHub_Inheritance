@@ -1,6 +1,21 @@
 const express = require('express')
-const User = require('../models/UserModel')
+const {
+    loginUser,
+    signupUser,
+    createUser
+} = require('../controllers/usercontroller')
 const router=express.Router()
+const requireAuth = require('../middleware/requireAuth')
+
+//login route
+
+router.post('/login',loginUser)
+
+//signup route
+router.post('/signup',signupUser)
+
+//require auth 
+router.use(requireAuth)
 
 //get user info
 router.get('/',(req,res)=>{
@@ -8,17 +23,7 @@ router.get('/',(req,res)=>{
 })
 
 //new user post
-router.post('/:id',async (req,res)=>{
-    const {name}=req.body
-    try{
-        const user = await User.create({name})
-        res.status(200).json(user)
-
-    } catch(error){
-        res.status(400).json({error: error.message})
-
-    }   
-})
+router.post('/:id',createUser)
 
 //delete user
 router.delete('/:id',(req,res)=>{
