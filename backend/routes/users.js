@@ -5,7 +5,7 @@ const {
     createUser
 } = require('../controllers/usercontroller')
 const router=express.Router()
-const requireAuth = require('../middleware/requireAuth')
+const {requireAuth} = require('../middleware/requireAuth')
 
 //login route
 
@@ -33,6 +33,21 @@ router.delete('/:id',(req,res)=>{
 //update user
 router.patch('/:id',(req,res)=>{
     res.json({mssg:'user updated'})
+})
+
+//get all jobs
+router.get('/jobs',(req,res)=>{
+    res.json({mssg:'Welcome to all the jobs'})
+})
+
+//get one job
+router.get('/jobs/:id',(req,res)=>{
+    res.json({mssg:'Welcome to the job'})   
+})
+
+//apply job
+router.post('/jobs/id',(req,res)=>{
+    res.json({mssg:'applied for job'})
 })
 
 module.exports = router

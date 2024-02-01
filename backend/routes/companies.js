@@ -1,11 +1,28 @@
 const express = require('express')
+const JobRoutes = require('./jobs')
+const {
+    loginCompany,
+    signupCompany
+}=require('../controllers/companycontroller')
+const {requireAuthCompany}= require('../middleware/requireAuth')
 
 const router=express.Router()
 
+//login route
+
+router.post('/login',loginCompany)
+
+//signup route
+router.post('/signup',signupCompany)
+
+router.use(requireAuthCompany)
+
 //get company profile
-router.get('/',(req,res)=>{
+router.get('/:id',(req,res)=>{
     res.json({mssg:'Welcome to the company'})
 })
+
+router.use('/jobs',JobRoutes)
 
 //new company data post
 router.post('/:id',(req,res)=>{
