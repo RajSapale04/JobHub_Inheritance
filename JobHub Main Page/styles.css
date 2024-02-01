@@ -2,19 +2,21 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Outfit", sans-serif;
   background-color: whitesmoke;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: black; /* Set text color for better contrast on the background */
+  width: 1519.2;
 }
 
 .bg-color {
+  background-color: linear-gradient(hsl(235, 18%, 26%), hsl(235, 18%, 65%));
   position: absolute;
   z-index: -1;
   width: 1519.2px;
-  height: 940px;
+  height: 960px;
   margin: 0px;
   margin-top: 800px;
   margin-bottom: 50px;
@@ -40,31 +42,31 @@ header {
   margin-left: 130px;
   font-size: 1.3em;
   color: hsl(235, 18%, 80%);
-  font-family: "Open Sans", sans-serif;
+  font-family: "Outfit", sans-serif;
   align-items: flex-start;
   position: absolute;
 }
 
 header {
-  background-color: hsl(235, 18%, 26%);
+  background: linear-gradient(hsl(235, 18%, 26%), hsl(235, 18%, 40%));
   max-height: 25px;
 }
 .navbar {
   width: 60%;
   align-items: flex-end;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 nav ul {
   list-style: none;
   display: flex;
   margin-left: 300px; /* Move the navigation to the right */
   align-items: flex-end;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 nav ul li {
   margin: 40px; /* Adjust spacing between buttons */
-  font-family: "Open Sans", sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 nav a {
@@ -82,7 +84,7 @@ nav a {
   background-color: hsl(235, 18%, 70%);
   color: hsl(235, 18%, 26%);
   text-decoration: none;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-weight: 490;
   padding: 10px 20px;
   border: none;
@@ -109,14 +111,14 @@ main {
   margin-bottom: 30px;
   font-weight: bolder;
   color: hsl(235, 18%, 26%);
-  font-family: "Roboto", sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 .hero p {
   font-size: 20px;
   color: hsl(236, 7%, 57%);
   text-align: left;
-  font-family: "Roboto", sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 .emphasized-text {
   color: hsl(235, 18%, 60%);
@@ -175,13 +177,13 @@ main {
   cursor: pointer;
   position: absolute;
   right: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 footer {
-  background-color: hsl(235, 18%, 26%);
+  background: linear-gradient(hsl(235, 18%, 26%), hsl(235, 18%, 50%));
   color: hsl(235, 18%, 80%);
   padding: 20px 150px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Outfit", sans-serif;
   align-items: center;
   margin: 0 auto;
 }
@@ -258,6 +260,7 @@ footer {
   text-align: left;
   padding-right: 20px;
   margin-left: 20px;
+  font-family: "Outfit", sans-serif;
 }
 .jobs p {
   margin: 6px;
@@ -265,10 +268,12 @@ footer {
   text-align: left;
   padding-right: 20px;
   color: rgb(173, 173, 173);
+  font-family: "Outfit", sans-serif;
 }
 
 .featured-jobs {
   margin-top: 75px;
+  font-family: "Outfit", sans-serif;
 }
 .featured {
   width: 350px;
@@ -279,6 +284,7 @@ footer {
   margin-left: 90px;
   margin-bottom: 50px;
   background-color: white;
+  font-family: "Outfit", sans-serif;
 }
 
 .featured-jobs h1 {
@@ -286,6 +292,7 @@ footer {
   text-align: center;
   margin-bottom: 70px;
   color: hsl(235, 18%, 90%);
+  font-family: "Outfit", sans-serif;
 }
 
 .featured-icon {
@@ -303,12 +310,14 @@ footer {
   width: 200px;
   display: inline-block;
   margin-top: 5px;
+  font-family: "Outfit", sans-serif;
 }
 .featured p {
   margin: 0px;
   margin-top: 5px;
 
   color: rgb(188, 188, 188);
+  font-family: "Outfit", sans-serif;
 }
 
 .featured-button {
@@ -321,6 +330,7 @@ footer {
   font-weight: 600;
   position: absolute;
   margin-top: 30px;
+  font-family: "Outfit", sans-serif;
 }
 
 .featured h4 {
@@ -329,6 +339,7 @@ footer {
   text-align: right;
   padding-right: 10px;
   font-size: 17px;
+  font-family: "Outfit", sans-serif;
 }
 .more-jobs {
   padding: 10px 25px;
@@ -342,6 +353,7 @@ footer {
   position: relative;
   margin-left: 680px;
   box-shadow: 2px 1px hsl(235, 18%, 85%);
+  font-family: "Outfit", sans-serif;
 }
 .learn-more {
   margin-top: 120px;
@@ -352,6 +364,7 @@ footer {
   margin-top: 0px;
   color: hsl(235, 18%, 26%);
   margin-bottom: 35px;
+  font-family: "Outfit", sans-serif;
 }
 .about {
   margin-bottom: 20px;
@@ -364,12 +377,14 @@ footer {
   border: 0px;
   border-radius: 3px;
   text-align: center;
+  font-family: "Outfit", sans-serif;
 }
 
 .learn-more p {
   margin-left: 600px;
   font-size: 20px;
   color: hsl(235, 18%, 55%);
+  font-family: "Outfit", sans-serif;
 }
 .learn-more i {
   margin-right: 10px;
@@ -386,6 +401,7 @@ footer {
   border: 0px;
   border-radius: 6px;
   text-align: center;
+  font-family: "Outfit", sans-serif;
 }
 .bg-learn {
   height: 500px;
