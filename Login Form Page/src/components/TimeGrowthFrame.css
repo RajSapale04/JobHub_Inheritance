@@ -1,0 +1,61 @@
+.hero-section {
+  height: 582px;
+  width: 710px;
+  border-radius: var(--br-mini);
+  overflow-y: auto;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+  gap: var(--gap-0);
+  z-index: 1;
+}
+.hero-section:hover {
+  display: flex;
+  width: 710px;
+  height: 582px;
+  flex-direction: row;
+  gap: var(--gap-0);
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-radius: var(--br-mini);
+  max-width: 100%;
+}
+.time-growth-frame {
+  width: 830px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0px var(--padding-xl);
+  box-sizing: border-box;
+  max-width: 100%;
+  height: auto;
+  gap: var(--gap-0);
+  transform: rotate(0deg);
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--font);
+  font-family: var(--font-outfit);
+}
+.time-growth-frame:hover {
+  display: flex;
+  width: 830px;
+  height: auto;
+  flex-direction: row;
+  gap: var(--gap-0);
+  align-items: flex-start;
+  justify-content: flex-end;
+  transform: rotate(0deg);
+  padding: 0px var(--padding-xl);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  .hero-section {
+    height: auto;
+  }
+}
