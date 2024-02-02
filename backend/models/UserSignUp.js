@@ -24,7 +24,6 @@ const userSchema = new mongoose.Schema({
   },
   password: {
     type: String,
-    required: true,
     minlenght: 6
   },
   mobileNumber: {
@@ -55,6 +54,9 @@ const userSchema = new mongoose.Schema({
     contentType: String,
     size: Number,
     data: Buffer
+  },
+  user_id:{
+    type: String
   }
 },{timestamps: true});
 
@@ -68,5 +70,5 @@ userSchema.pre('validate', function (next) {
 });
 
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('UserProfile', userSchema);
 

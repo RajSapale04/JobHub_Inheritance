@@ -24,7 +24,6 @@ const companySchema = new mongoose.Schema({
   },
   password: {
     type: String,
-    required: true,
     minlenght: 6
   },
   mobileNumber: {
@@ -54,6 +53,10 @@ const companySchema = new mongoose.Schema({
     contentType: String,
     size: Number,
     data: Buffer
+  },
+  company_id:{
+    type:String,
+    required:true
   }
 },{timestamps: true});
 
@@ -67,5 +70,5 @@ companySchema.pre('validate', function (next) {
 });
 
 
-module.exports = mongoose.model('Company', companySchema);
+module.exports = mongoose.model('CompanyProfile', companySchema);
 
