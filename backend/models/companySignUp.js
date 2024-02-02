@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt')
 const validator = require('validator')
 
-const userSchema = new mongoose.Schema({
+const companySchema = new mongoose.Schema({
   firstName: {
     type: String,
     required: true
@@ -37,20 +37,19 @@ const userSchema = new mongoose.Schema({
         message: 'Invalid mobile number'
       }
   },
-  currentCity: {
+  companyName: {
     type: String,
     required: true
   },
-  currentCountry: {
+  registeredCountry: {
     type: String,
     required: true
   },
-  workStatus: {
+  designation: {
     type: String,
-    enum: ['experienced', 'fresher'],
     required: true
   },
-  resume: {
+  companyVerification: {
     filename: String,
     contentType: String,
     size: Number,
@@ -58,15 +57,15 @@ const userSchema = new mongoose.Schema({
   }
 },{timestamps: true});
 
-userSchema.pre('validate', function (next) {
+companySchema.pre('validate', function (next) {
   const maxResumeSize = 2 * 1024 * 1024; // 2MB
 
-  if (this.resume && this.resume.size > maxResumeSize) {
+  if (this.companyVerification && this.companyVerification.size > maxResumeSize) {
     return next(new Error('Resume size exceeds the limit of 2MB.'));
   }
   next();
 });
 
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('Company', companySchema);
 
