@@ -23,6 +23,8 @@ const loginUser = async (req,res) =>{
 
 const signupUser = async (req,res) =>{
     const {email,password}=req.body
+    
+
     try{
         const user = await User.signup(email,password)
 
@@ -37,9 +39,10 @@ const signupUser = async (req,res) =>{
 }
 
 const createUser = async (req,res)=>{
-        const {name}=req.body
+    const user_id = req.user._id
+    const {name}=req.body
     try{
-        const user = await User.create({name})
+        const user = 
         res.status(200).json(user)
 
     } catch(error){
