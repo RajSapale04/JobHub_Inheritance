@@ -1,8 +1,10 @@
 import "./Hero1.css";
+import { Link } from 'react-router-dom';
 
 const Hero1 = () => {
   return (
     <div className="hero2">
+      <div className="hero-inner" />
       <img
         className="job-employment-png-image-1-icon"
         loading="eager"
@@ -15,11 +17,13 @@ const Hero1 = () => {
       </div>
       <div className="empty-frame">
         <div className="empty-frame1">
-          <div className="jobseeker1">Jobseeker</div>
+          <Link to="/jobseeker">
+          <div className="jobseeker1">Jobseeker</div></Link>
         </div>
       </div>
       <div className="empty-frame2">
-        <div className="employer1">Employer</div>
+      <Link to="/employer">
+        <div className="jobseeker1">Employer</div></Link>
       </div>
     </div>
   );

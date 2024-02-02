@@ -9,6 +9,7 @@ const FrameheroSection = () => {
     <div className="framehero-section">
       <div className="hero-section1">
         <div className="hero1">
+          <div className="hero-item" />
           <div className="im-experienced-frame">
             <b className="time-to-grow1">Time to grow your career!</b>
           </div>
@@ -99,7 +100,7 @@ const FrameheroSection = () => {
                   <span>
                     <p className="im-a-fresher">Im a fresher</p>
                     <p className="i-am-a">
-                      I am a student/Have’nt worked after graduation
+                      I am a student/Have’nt<br></br> worked after graduation
                     </p>
                   </span>
                 </div>

@@ -5,6 +5,7 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
+import LoginPage from "./pages/LoginPage";
 import Employer from "./pages/Employer";
 import JobSeeker from "./pages/JobSeeker";
 import Welcome from "./pages/Welcome";
@@ -26,6 +27,10 @@ function App() {
 
     switch (pathname) {
       case "/":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/employer":
         title = "";
         metaDescription = "";
         break;
@@ -55,9 +60,10 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Employer />} />
+      <Route path="/" element={<Welcome />} />
+      <Route path="/employer" element={<Employer />} />
       <Route path="/jobseeker" element={<JobSeeker />} />
-      <Route path="/welcome" element={<Welcome />} />
+      <Route path="/loginpage" element={<LoginPage />} />
     </Routes>
   );
 }

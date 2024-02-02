@@ -6,6 +6,7 @@ const Hero = () => {
   const [createAPasswordValue, setCreateAPasswordValue] = useState("");
   return (
     <div className="hero">
+      <div className="hero-child" />
       <div className="city-input-frame">
         <b className="time-to-grow">Time to grow your company!</b>
       </div>
@@ -25,7 +26,7 @@ const Hero = () => {
         emailID="Company Email ID"
         whatIsYouEmailIDPlacehold="What is you Email ID?"
         emailIDHeight="25px"
-        emailIDDisplay="flex"
+        emailIDDisplay="inline-block"
       />
       <div className="last-name-input-frame">
         <div className="password-min-6-container">
