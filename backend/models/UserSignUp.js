@@ -47,7 +47,6 @@ const userSchema = new mongoose.Schema({
   },
   workStatus: {
     type: String,
-    enum: ['experienced', 'fresher'],
     required: true
   },
   resume: {
