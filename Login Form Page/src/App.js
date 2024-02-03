@@ -5,6 +5,8 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
+import MainPage from "./pages/MainPage";
+
 import LoginPage from "./pages/LoginPage";
 import Employer from "./pages/Employer";
 import JobSeeker from "./pages/JobSeeker";
@@ -30,6 +32,11 @@ function App() {
         title = "";
         metaDescription = "";
         break;
+      case "/login-page":
+        title = "";
+        metaDescription = "";
+        break;
+
       case "/employer":
         title = "";
         metaDescription = "";
@@ -60,10 +67,13 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Welcome />} />
+      <Route path="/" element={<MainPage />} />
+      <Route path="/login-page" element={<LoginPage />} />
+
       <Route path="/employer" element={<Employer />} />
       <Route path="/jobseeker" element={<JobSeeker />} />
-      <Route path="/loginpage" element={<LoginPage />} />
+      <Route path="/welcome" element={<Welcome />} />
+
     </Routes>
   );
 }

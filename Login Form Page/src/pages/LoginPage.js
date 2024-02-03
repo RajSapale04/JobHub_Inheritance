@@ -2,7 +2,6 @@ import FRAMEWelcomeBack from "../components/FRAMEWelcomeBack";
 import "./LoginPage.css";
 import { Link } from "react-router-dom";
 
-
 const LoginPage = () => {
   return (
     <div className="login-page">
@@ -15,13 +14,8 @@ const LoginPage = () => {
             </div>
           </div>
         </div>
-        <div className="art">
-          <img
-            className="screenshot-2024-02-02-004906-1"
-            alt=""
-            src="/screenshot-20240202-004906-1@2x.png"
-          />
-        </div>
+        <div className="art" />
+
       </main>
     </div>
   );

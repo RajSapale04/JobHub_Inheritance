@@ -26,7 +26,8 @@ const Hero = () => {
         emailID="Company Email ID"
         whatIsYouEmailIDPlacehold="What is you Email ID?"
         emailIDHeight="25px"
-        emailIDDisplay="inline-block"
+        emailIDDisplay="flex"
+
       />
       <div className="last-name-input-frame">
         <div className="password-min-6-container">

@@ -7,11 +7,22 @@
   align-items: center;
   z-index: 1;
 }
+.email-id:hover {
+  font-weight: 500;
+  font-family: var(--font-outfit);
+  font-size: var(--body-xl-500-size);
+  text-align: left;
+  color: var(--font);
+  display: flex;
+  height: 25px;
+}
+
 .what-is-you {
   border: none;
   outline: none;
   font-family: var(--font-outfit);
-  font-size: var(--font-size-base);
+  font-size: var(--body-medium-400-size);
+
   background-color: transparent;
   height: 20px;
   flex: 1;
@@ -20,9 +31,22 @@
   text-align: left;
   display: flex;
   align-items: center;
-  min-width: 250px;
+  min-width: 250;
+
   max-width: 100%;
 }
+.what-is-you:hover {
+  font-family: var(--font-outfit);
+  font-size: var(--body-medium-400-size);
+  text-align: left;
+  color: var(--color-gray-200);
+  display: flex;
+  flex: 1;
+  height: 20px;
+  min-width: 250;
+  max-width: 100%;
+}
+
 .career-growth-frame {
   align-self: stretch;
   border-radius: var(--br-3xs);
@@ -34,8 +58,28 @@
   justify-content: center;
   padding: var(--padding-3xs) var(--padding-4xs);
   max-width: 100%;
+  width: auto;
+  height: auto;
+  gap: var(--gap-3xs);
+
   z-index: 1;
 }
+.career-growth-frame:hover {
+  display: flex;
+  align-self: stretch;
+  width: auto;
+  height: auto;
+  flex-direction: row;
+  gap: var(--gap-3xs);
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--br-3xs);
+  padding: var(--padding-3xs) var(--padding-4xs);
+  box-sizing: border-box;
+  border: 1px solid var(--color-black);
+  max-width: 100%;
+}
+
 .last-name-input1 {
   width: 505px;
   height: 79px;
@@ -45,14 +89,30 @@
   justify-content: flex-start;
   gap: var(--gap-3xs);
   max-width: 100%;
+  transform: rotate(0deg);
+
   text-align: left;
-  font-size: var(--font-size-xl);
+  font-size: var(--body-xl-500-size);
+
   color: var(--font);
   font-family: var(--font-outfit);
 }
+.last-name-input1:hover {
+  display: flex;
+  width: 505px;
+  height: 79px;
+  flex-direction: column;
+  gap: var(--gap-3xs);
+  align-items: flex-start;
+  justify-content: flex-start;
+  transform: rotate(0deg);
+  max-width: 100%;
+}
+
 
 @media screen and (max-width: 800px) {
   .email-id {
-    font-size: var(--font-size-base);
+    font-size: var(--body-medium-400-size);
+
   }
 }

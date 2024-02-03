@@ -2,7 +2,6 @@ import Input from "./Input";
 import "./FRAMEWelcomeBack.css";
 import { Link } from "react-router-dom";
 
-
 const FRAMEWelcomeBack = () => {
   return (
     <div className="f-r-a-m-e-welcome-back">
@@ -26,7 +25,6 @@ const FRAMEWelcomeBack = () => {
         />
         <div className="forgot-password">Forgot Password?</div>
         <button className="main-button">
-          
           <div className="sign-in">Sign in</div>
         </button>
       </form>
@@ -46,7 +44,8 @@ const FRAMEWelcomeBack = () => {
         <span className="dont-you-have-container1">
           <span>{`Don't you have an account? `}</span>
           <Link to="/">
-          <span className="sign-up">Sign up</span></Link>
+            <span className="sign-up">Sign up</span>
+          </Link>
         </span>
       </div>
     </div>

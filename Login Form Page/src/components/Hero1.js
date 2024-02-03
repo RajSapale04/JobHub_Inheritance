@@ -1,5 +1,5 @@
 import "./Hero1.css";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Hero1 = () => {
   return (
@@ -18,12 +18,14 @@ const Hero1 = () => {
       <div className="empty-frame">
         <div className="empty-frame1">
           <Link to="/jobseeker">
-          <div className="jobseeker1">Jobseeker</div></Link>
+            <div className="jobseeker1">Jobseeker</div>
+          </Link>
         </div>
       </div>
       <div className="empty-frame2">
-      <Link to="/employer">
-        <div className="jobseeker1">Employer</div></Link>
+        <Link to="/employer">
+          <div className="jobseeker1">Employer</div>
+        </Link>
       </div>
     </div>
   );

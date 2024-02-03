@@ -1,0 +1,154 @@
+.user-plus-duotone-1-icon {
+  height: 32px;
+  width: 32px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  gap: var(--gap-0);
+}
+.user-plus-duotone-1-icon:hover {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  gap: var(--gap-0);
+}
+.icon {
+  cursor: pointer;
+  border: none;
+  padding: var(--padding-xl);
+  background-color: var(--gray-white);
+  width: 72px;
+  height: 72px;
+  border-radius: var(--br-61xl);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  gap: var(--gap-3xs);
+}
+.icon:hover {
+  background-color: var(--gray-white);
+  display: flex;
+  width: 72px;
+  height: 72px;
+  flex-direction: row;
+  gap: var(--gap-3xs);
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-radius: var(--br-61xl);
+  padding: var(--padding-xl);
+  box-sizing: border-box;
+}
+.create-account1 {
+  align-self: stretch;
+  height: 28px;
+  position: relative;
+  line-height: 28px;
+  font-weight: 500;
+  display: flex;
+  width: auto;
+}
+.create-account1:hover {
+  font-weight: 500;
+  font-family: var(--font-outfit);
+  font-size: var(--body-large-500-size);
+  line-height: 28px;
+  text-align: center;
+  color: var(--main);
+  display: flex;
+  align-self: stretch;
+  width: auto;
+}
+.aliquam-facilisis-egestas {
+  align-self: stretch;
+  height: 40px;
+  position: relative;
+  font-size: var(--body-small-400-size);
+  line-height: 20px;
+  color: var(--gray-500);
+  display: flex;
+  width: auto;
+}
+.aliquam-facilisis-egestas:hover {
+  font-family: var(--font-outfit);
+  font-size: var(--body-small-400-size);
+  line-height: 20px;
+  text-align: center;
+  color: var(--gray-500);
+  display: flex;
+  align-self: stretch;
+  width: auto;
+}
+.quick-link-employers {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+  width: auto;
+  height: auto;
+  transform: rotate(0deg);
+}
+.quick-link-employers:hover {
+  display: flex;
+  align-self: stretch;
+  width: auto;
+  height: auto;
+  flex-direction: column;
+  gap: var(--gap-xs);
+  align-items: flex-start;
+  justify-content: flex-start;
+  transform: rotate(0deg);
+}
+.arrows-icon {
+  width: 222px;
+  height: 48px;
+  position: absolute;
+  margin: 0 !important;
+  top: 4px;
+  right: -123px;
+  display: flex;
+  z-index: 1;
+}
+.arrows-icon:hover {
+  display: flex;
+  width: 222px;
+  height: 48px;
+}
+.create-account {
+  flex: 1;
+  border-radius: var(--br-xs);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-5xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-5xl);
+  min-width: 284;
+  max-width: 312;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-size: var(--body-large-500-size);
+  color: var(--main);
+  font-family: var(--font-outfit);
+}
+.create-account:hover {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  gap: var(--gap-5xl);
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: var(--br-xs);
+  padding: var(--padding-5xl);
+  box-sizing: border-box;
+  min-width: 284;
+  max-width: 312;
+}

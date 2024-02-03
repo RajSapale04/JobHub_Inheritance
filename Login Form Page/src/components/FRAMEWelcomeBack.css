@@ -10,11 +10,18 @@
   letter-spacing: 0.01em;
   line-height: 100%;
   white-space: pre-wrap;
-  display: inline-block;
+  display: flex;
+
   font-family: inherit;
 }
-a {
-  color: var(--color-darkslategray-100);
+.welcome-back-container:hover {
+  font-size: var(--font-size-17xl);
+  letter-spacing: 0.01em;
+  line-height: 100%;
+  text-align: center;
+  color: var(--primary-text);
+  display: flex;
+
 }
 .today-is-a {
   margin: 0;
@@ -23,7 +30,8 @@ a {
   width: 414px;
   height: 64px;
   position: relative;
-  font-size: var(--font-size-xl);
+  font-size: var(--body-xl-500-size);
+
   letter-spacing: 0.01em;
   line-height: 160%;
   color: var(--secondary-text);
@@ -31,54 +39,132 @@ a {
   display: flex;
   align-items: center;
 }
+.today-is-a-container:hover {
+  font-family: var(--font-outfit);
+  font-size: var(--body-xl-500-size);
+  letter-spacing: 0.01em;
+  line-height: 160%;
+  text-align: left;
+  color: var(--secondary-text);
+  display: flex;
+  height: 64px;
+}
+
 .welcome-back-parent {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   gap: var(--gap-9xl);
+  width: auto;
+  align-self: unset;
+  height: auto;
+  transform: rotate(0deg);
+
   font-family: var(--font-outfit);
 }
+.welcome-back-parent:hover {
+  display: flex;
+  width: auto;
+  align-self: unset;
+  height: auto;
+  flex-direction: column;
+  gap: var(--gap-9xl);
+  align-items: flex-start;
+  justify-content: flex-start;
+  transform: rotate(0deg);
+}
+
 .forgot-password {
   width: 132px;
   height: 16px;
   position: relative;
-  font-size: var(--font-size-base);
+  font-size: var(--body-medium-400-size);
+
   letter-spacing: 0.01em;
   line-height: 100%;
   font-family: var(--font-roboto);
-  color: var(--color-darkslategray-100);
+  color: var(--link);
+
   text-align: center;
-  display: inline-block;
+  display: flex;
+
 }
+.forgot-password:hover {
+  font-family: var(--font-roboto);
+  font-size: var(--body-medium-400-size);
+  letter-spacing: 0.01em;
+  line-height: 100%;
+  text-align: center;
+  color: var(--link);
+  display: flex;
+}
+
 .sign-in {
   height: 20px;
   width: 62px;
   position: relative;
-  font-size: var(--font-size-xl);
+  font-size: var(--body-xl-500-size);
+
   letter-spacing: 0.01em;
   line-height: 100%;
   font-family: var(--font-roboto);
-  color: var(--color-white);
+  color: var(--gray-white);
+
   text-align: center;
-  display: inline-block;
+  display: flex;
+
 }
+.sign-in:hover {
+  font-family: var(--font-roboto);
+  font-size: var(--body-xl-500-size);
+  letter-spacing: 0.01em;
+  line-height: 100%;
+  text-align: center;
+  color: var(--gray-white);
+  display: flex;
+}
+
 .main-button {
   cursor: pointer;
   border: none;
   padding: var(--padding-base);
-  background-color: var(--color-darkslategray-300);
+  background-color: var(--color-slategray-100);
+
   align-self: stretch;
   border-radius: var(--br-xs);
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+
   white-space: nowrap;
+  width: auto;
+  height: auto;
+  gap: var(--gap-3xs);
+
 }
 .main-button:hover {
-  background-color: var(--color-slategray);
+  background-color: var(--main);
+  display: flex;
+  align-self: stretch;
+  width: auto;
+  height: auto;
+  flex-direction: row;
+  gap: var(--gap-3xs);
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--br-xs);
+  padding: var(--padding-base);
+  box-sizing: border-box;
+  white-space: nowrap;
+
 }
+.main-button:active {
+  background-color: var(--color-slategray-100);
+}
+
 .input-password {
   margin: 0;
   width: 388px;
@@ -89,22 +175,58 @@ a {
   justify-content: flex-start;
   gap: var(--gap-5xl);
   max-width: 100%;
+  transform: rotate(0deg);
+
 }
+.input-password:hover {
+  display: flex;
+  width: 388px;
+  height: 294px;
+  flex-direction: column;
+  gap: var(--gap-5xl);
+  align-items: flex-end;
+  justify-content: flex-start;
+  transform: rotate(0deg);
+  max-width: 100%;
+}
+
 .or-line-frame-child {
   height: 1px;
   flex: 1;
   position: relative;
   border-top: 1px solid var(--color-gainsboro-200);
   box-sizing: border-box;
+  display: flex;
+  border: 1px solid var(--color-gainsboro-200);
+
 }
+.or-line-frame-child:hover {
+  display: flex;
+  flex: 1;
+  height: 1px;
+  border: 1px solid var(--color-gainsboro-200);
+  box-sizing: border-box;
+}
+
 .or {
   height: 16px;
   width: 17px;
   position: relative;
   letter-spacing: 0.01em;
   line-height: 100%;
-  display: inline-block;
+  display: flex;
+
 }
+.or:hover {
+  font-family: var(--font-roboto);
+  font-size: var(--body-medium-400-size);
+  letter-spacing: 0.01em;
+  line-height: 100%;
+  text-align: center;
+  color: var(--color-darkslategray-200);
+  display: flex;
+}
+
 .or-line-frame {
   align-self: stretch;
   display: flex;
@@ -112,28 +234,47 @@ a {
   align-items: center;
   justify-content: flex-start;
   gap: var(--gap-base);
+  width: auto;
+  height: auto;
+  transform: rotate(0deg);
+
 }
+.or-line-frame:hover {
+  display: flex;
+  align-self: stretch;
+  width: auto;
+  height: auto;
+  flex-direction: row;
+  gap: var(--gap-base);
+  align-items: center;
+  justify-content: flex-start;
+  transform: rotate(0deg);
+}
+
 .google-icon {
   height: 28px;
   width: 28px;
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
+  display: flex;
+  gap: var(--gap-0);
+
 }
-.facebook-icon {
-  height: 28px;
+.google-icon:hover {
+  display: flex;
   width: 28px;
-  position: relative;
-  overflow: hidden;
-  flex-shrink: 0;
-  display: none;
-  min-height: 28px;
+
+  height: 28px;
+  gap: var(--gap-0);
+
 }
 .sign-in-with {
   height: 16px;
   width: 159px;
   position: relative;
-  font-size: var(--font-size-base);
+  font-size: var(--body-medium-400-size);
+
   letter-spacing: 0.01em;
   line-height: 100%;
   font-family: var(--font-roboto);
@@ -143,20 +284,53 @@ a {
   align-items: center;
   flex-shrink: 0;
 }
+.sign-in-with:hover {
+  font-family: var(--font-roboto);
+  font-size: var(--body-medium-400-size);
+  letter-spacing: 0.01em;
+  line-height: 100%;
+  text-align: left;
+  color: var(--secondary-text);
+  display: flex;
+  width: 159px;
+}
+
 .social-button {
   cursor: pointer;
   border: none;
   padding: var(--padding-xs) var(--padding-xl) var(--padding-xs)
     var(--padding-2xl);
-  background-color: var(--color-whitesmoke);
+  background-color: var(--color-whitesmoke-100);
+
   align-self: stretch;
   border-radius: var(--br-xs);
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+
   gap: var(--gap-base);
+  width: auto;
+  height: auto;
+
 }
+.social-button:hover {
+  background-color: var(--color-whitesmoke-100);
+  display: flex;
+  align-self: stretch;
+  width: auto;
+  height: auto;
+  flex-direction: row;
+  gap: var(--gap-base);
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--br-xs);
+  padding: var(--padding-xs) var(--padding-xl) var(--padding-xs)
+    var(--padding-2xl);
+  box-sizing: border-box;
+}
+
 .frame-or-sign-in {
   width: 388px;
   display: flex;
@@ -165,11 +339,27 @@ a {
   justify-content: flex-start;
   gap: var(--gap-15xl);
   max-width: 100%;
-  font-size: var(--font-size-base);
+  height: auto;
+  transform: rotate(0deg);
+  font-size: var(--body-medium-400-size);
+
   color: var(--color-darkslategray-200);
 }
+.frame-or-sign-in:hover {
+  display: flex;
+  width: 388px;
+  height: auto;
+  flex-direction: column;
+  gap: var(--gap-15xl);
+  align-items: flex-start;
+  justify-content: flex-start;
+  transform: rotate(0deg);
+  max-width: 100%;
+}
+
 .sign-up {
-  color: var(--color-darkslategray-100);
+  color: var(--link);
+
 }
 .dont-you-have-container1 {
   width: 100%;
@@ -178,7 +368,8 @@ a {
   width: 382px;
   height: 29px;
   position: relative;
-  font-size: var(--font-size-lg);
+  font-size: var(--body-large-500-size);
+
   letter-spacing: 0.01em;
   line-height: 160%;
   display: flex;
@@ -186,6 +377,17 @@ a {
   max-width: 100%;
   color: var(--secondary-text);
 }
+.dont-you-have-container:hover {
+  font-family: var(--font-roboto);
+  font-size: var(--body-large-500-size);
+  letter-spacing: 0.01em;
+  line-height: 160%;
+  text-align: center;
+  display: flex;
+  width: 382px;
+  max-width: 100%;
+}
+
 .f-r-a-m-e-welcome-back {
   display: flex;
   flex-direction: column;
@@ -194,11 +396,30 @@ a {
   gap: var(--gap-29xl);
   max-width: 100%;
   flex-shrink: 0;
+  width: auto;
+  align-self: unset;
+  height: auto;
+  transform: rotate(0deg);
+
   text-align: center;
   font-size: var(--font-size-17xl);
   color: var(--primary-text);
   font-family: var(--font-roboto);
 }
+.f-r-a-m-e-welcome-back:hover {
+  display: flex;
+  width: auto;
+  align-self: unset;
+  height: auto;
+  flex-direction: column;
+  gap: var(--gap-29xl);
+  align-items: flex-start;
+  justify-content: flex-start;
+  transform: rotate(0deg);
+  max-width: 100%;
+  flex-shrink: 0;
+}
+
 
 @media screen and (max-width: 800px) {
   .welcome-back-container {
@@ -213,7 +434,8 @@ a {
   }
 
   .today-is-a-container {
-    font-size: var(--font-size-base);
+    font-size: var(--body-medium-400-size);
+
     line-height: 26px;
   }
 

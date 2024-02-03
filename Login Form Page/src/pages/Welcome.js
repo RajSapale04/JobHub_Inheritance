@@ -7,14 +7,14 @@ const Welcome = () => {
     <div className="welcome">
       <img className="background-icon2" alt="" src="/background.svg" />
       <div className="navbar2">
-        <header className="navbar-inner" />
-        <h2 className="jobhub3">JobHub</h2>
+        <h2 className="jobhub2">JobHub</h2>
+
         <div className="already-registered-parent">
-          <div className="already-registered3">Already Registered?</div>
+          <div className="already-registered2">Already Registered?</div>
+
           <button className="login-here-text">
-            <Link to="/LoginPage">
-              <div className="login-here2">Login Here</div>
-            </Link>
+            <div className="login-here2">Login Here</div>
+
           </button>
         </div>
       </div>

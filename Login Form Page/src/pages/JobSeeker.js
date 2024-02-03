@@ -9,12 +9,18 @@ const JobSeeker = () => {
       <header className="navbar1">
         <div className="navbar-item" />
         <h2 className="jobhub2">JobHub</h2>
+        <h2 className="jobhub1">JobHub</h2>
+
         <div className="job-hub-text">
           <div className="already-registered2">Already Registered?</div>
+          <div className="already-registered1">Already Registered?</div>
+
           <button className="login-frame1">
             <Link to="/LoginPage">
               <div className="login-here1">Login Here</div>
             </Link>
+            <div className="login-here1">Login Here</div>
+
           </button>
         </div>
       </header>
