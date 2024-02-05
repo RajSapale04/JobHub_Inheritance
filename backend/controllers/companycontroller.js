@@ -63,8 +63,8 @@ const getCompany= async(req,res)=>{
 
 const deleteCompany=async(req,res)=>{
     const company_id = req.user._id
-    const companys = Compnay.findOneAndDelete({_id:company_id})
-    const company = CompanyProfile.findOneAndDelete({company_id})
+    const companys = Company.findOneAndDelete({_id:company_id})
+    const company = await CompanyProfile.findOneAndDelete({company_id})
     if(!company){
         return res.status(404).json({error:"no such company found"})
     }
@@ -74,7 +74,7 @@ const deleteCompany=async(req,res)=>{
 
 const updateCompany= async(req,res)=>{
     const company_id = req.user._id
-    const company = CompanyProfile.findOneAndUpdate({company_id},{
+    const company = await CompanyProfile.findOneAndUpdate({company_id},{
         ...req.body
     })
     if(!company){
