@@ -1,4 +1,5 @@
 const Job = require('../models/postJob')
+const UserProfile = require('../models/UserSignUp')
 
 const postJob=async (req,res)=>{
     const company_id = req.user._id
@@ -7,33 +8,15 @@ const postJob=async (req,res)=>{
         res.status(200).json(job)
         
     } catch (error) {
-        res.status(400).json({error: error.message})
-        
+        res.status(400).json({error: error.message})       
     }
     
 }
-const applyJob = async (req,res)=>{
-    const user_id=req.user._id
-    const {_id} = req.body
-    const job = await Job.findOne({user_id:user_id})
-    if(job){
-        return res.status(404).json({
-            error:"already applied"
-        })
-    }
-    const jobs = await Job.findOneAndUpdate({_id},{$push:{user_id:user_id}})
-    if(!jobs){
-        return res.status(404).json({
-            error:"no such job found"
-        })
-    }
-    res.status(200).json(jobs)
 
-
-}
 const deleteJob=async(req,res)=>{
-    const company_id = req.user._id
-    const job = await Job.findOneAndDelete({company_id})
+    const _id=req.params['id']
+    const user= await UserProfile.updateMany({jobs:_id},{$pull:{jobs:_id}})
+    const job = await Job.findOneAndDelete({_id})
     if(!job){
         return res.status(404).json({error:"no such company found"})
     }
@@ -41,7 +24,7 @@ const deleteJob=async(req,res)=>{
 
 }
 const updateJob= async(req,res)=>{
-    const company_id = req.user._id
+    const company_id = req.params['id']
     const job = await Job.findOneAndUpdate({company_id},{
         ...req.body
     })
@@ -52,9 +35,68 @@ const updateJob= async(req,res)=>{
 
 }
 
+const getUsers = async(req,res)=>{
+    const _id = req.params['id']
+    const user = await UserProfile.find({jobs:_id})
+    if(!user){
+        return res.status(404).json({error:"no users found"})
+    }
+    res.status(200).json(user)
+}
+
+const getUser =async(req,res)=>{
+    const user_id = req.params['id']
+    const user = await UserProfile.find({user_id})
+    if(!user){
+        return res.status(404).json({
+            error:"User not found"
+        })
+    }
+    res.status(200).json(user)
+}
+
+const removeUser = async(req,res)=>{
+    try {
+        
+    
+    const user_id = req.params['user']
+    const _id = req.params['id']
+    const job= await Job.findOneAndUpdate({_id},{$pull:{user_id}},{new:true})
+    const user= await UserProfile.updateMany({jobs:_id},{$pull:{jobs:_id}})
+    res.status(200).json(job)
+    }
+     catch (error) {
+        res.status(400).json({error:error.message})
+        
+    }
+
+}
+
+const acceptUser= async(req,res)=>{
+        try {
+        
+    
+    const user_id = req.params['user']
+    const _id = req.params['id']
+    const job= await Job.findOneAndUpdate({_id},{$pull:{user_id},$inc:{vacancies:-1}},{new:true})
+    const user= await UserProfile.updateMany({jobs:_id},{$pull:{jobs:_id},$push:{acceptedJobs:_id}})
+    res.status(200).json(job)
+    }
+     catch (error) {
+        res.status(400).json({error:error.message})
+        
+    }
+
+
+}
+
+
 module.exports={
     postJob,
-    applyJob,
     deleteJob,
-    updateJob
+    updateJob,
+    getUsers,
+    getUser,
+    removeUser,
+    acceptUser
 }

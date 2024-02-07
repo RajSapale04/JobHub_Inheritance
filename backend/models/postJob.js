@@ -40,7 +40,7 @@ const postJob = new mongoose.Schema({
     required: true
   },
   vacancies: {
-    type: String,
+    type: Number,
     required: true
   },
   expirationDate: {

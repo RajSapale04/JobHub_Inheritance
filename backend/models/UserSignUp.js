@@ -54,6 +54,8 @@ const userSchema = new mongoose.Schema({
     size: Number,
     data: Buffer
   },
+  jobs:[String],
+  acceptedJobs:[String],
   user_id:{
     type: String,
     required:true,
