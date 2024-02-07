@@ -1,5 +1,9 @@
 const express = require('express')
-
+const {
+    postJob,
+    deleteJob,
+    updateJob
+}=require('../controllers/jobscontroller')
 const router=express.Router()
 
 
@@ -10,16 +14,12 @@ const router=express.Router()
 
 //post one job
 
-router.post('/:id',(req,res)=>{
-    res.json({mssg:'Welcome to the job'})   
-})
+router.post('/:id',postJob)
 
 
 
 //delete job
-router.delete('/:id',(req,res)=>{
-    res.json({mssg:'Job is deleted'})
-})
+router.delete('/:id',deleteJob)
 
 //update job
 router.patch('/:id',(req,res)=>{

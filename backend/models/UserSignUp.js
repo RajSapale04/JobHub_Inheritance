@@ -55,7 +55,9 @@ const userSchema = new mongoose.Schema({
     data: Buffer
   },
   user_id:{
-    type: String
+    type: String,
+    required:true,
+    unique:true
   }
 },{timestamps: true});
 

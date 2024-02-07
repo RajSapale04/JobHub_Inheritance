@@ -39,9 +39,9 @@ const signupUser = async (req,res) =>{
 
 const createUser = async (req,res)=>{
     const user_id = req.user._id
-    const {firstName,lastName,email,mobileNumber,currentCity,currentCountry,workStatus,resume}=req.body
+ 
     try{
-        const user = await UserProfile.create({firstName,lastName,email,mobileNumber,currentCity,currentCountry,workStatus,resume,user_id})
+        const user = await UserProfile.create({...req.body,user_id})
         res.status(200).json(user)
 
     } catch(error){
@@ -60,23 +60,26 @@ const getUser = async(req,res)=>{
 const deleteUser=async(req,res)=>{
     const user_id = req.user._id
     const userS = await User.findOneAndDelete({_id:user_id})
-    const user = await UserProfile.findOneAndDelete({user_id})
-    if(!user){
+    const user = await UserProfile.findOneAndDelete({user_id})      
+    console.log(user,userS)
+    if(!userS){
         return res.status(404).json({error:"no such user found"})
     }
-    res.status(200).json(user,userS)
+    res.status(200).json(user,userS)   
 }
 
 const updateUser= async(req,res)=>{
     const user_id= req.user._id
+    console.log(user_id)
     const user = await UserProfile.findOneAndUpdate({user_id},{
         ...req.body
     })
-        if(!user){
+    if(!user){
         return res.status(404).json({error:"no such user found"})
     }
     res.status(200).json(user)
 }
+
 
 module.exports={
     loginUser,

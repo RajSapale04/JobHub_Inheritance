@@ -22,10 +22,6 @@ const companySchema = new mongoose.Schema({
         message: 'Invalid email address'
       }
   },
-  password: {
-    type: String,
-    minlenght: 6
-  },
   mobileNumber: {
     type: String,
     required: true,
