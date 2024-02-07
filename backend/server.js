@@ -4,6 +4,7 @@ const express = require('express')
 const Routes = require('./routes/index')
 
 const app = express()
+
 const mongoose = require('mongoose');
 
 
@@ -11,6 +12,7 @@ const mongoose = require('mongoose');
 app.use(express.json())
 
 app.use(Routes)
+
 const db = process.env.MONG_URI;
 mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true})
    .then(() => {
