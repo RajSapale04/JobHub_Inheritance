@@ -70,19 +70,15 @@ You can use icons too - find them [here](https://github.com/get-icon/geticon)
 List down all the fully implemented features in your project
 
 - A dedicated forum for users 
-- [x] Fully Implemented Feature 2
+- User can sucessfully apply for a job
 
 List down all the partially implemented features in your project
-
-- [ ] Partially Implemented Feature 1 
-- [ ] Partially Implemented Feature 2
+-Interview scheduling ising voice chat
+  
 
 ## 🔮Future Scope
 
-List down all the future plans for the project here
-
-- Future Feature 1
-- Future Feature 2
+- Voice and Video chat
 
 ## 💸Applications
 
@@ -100,8 +96,10 @@ List down all the future plans for the project here
 
 Add names of your team members with their emails and links to their GitHub accounts
 
-- [Team Member 1 Name](https://github.com/): Email 
-- [Team Member 2 Name](https://github.com/): Email 
+- Raj Sapale]: rssapale_b22@ce.vjti.ac.in
+- Mit Mayekar(https://github.com/): mdmayekar_b22@ce.vjti.ac.in
+- Abdulqadir Amin():()aamin_b22@ce.vjti.ac.in
+- Vedant Aswale():vaaswale_b22@ce.vjti.ac.in
 
 ## 👨‍🏫Mentors
 
