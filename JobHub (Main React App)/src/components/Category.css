@@ -1,0 +1,60 @@
+.category5-child {
+  height: 70px;
+  width: 236px;
+  position: relative;
+  border-radius: var(--br-8xs);
+  background-color: var(--gray-00);
+  box-shadow: 2px 2px 6.1px rgba(0, 0, 0, 0.37);
+  display: none;
+}
+.businessman-1-icon2 {
+  height: 52px;
+  width: 52px;
+  position: relative;
+  border-radius: var(--br-8xs);
+  object-fit: contain;
+  z-index: 1;
+}
+.legal-services {
+  margin-block-start: 0;
+  margin-block-end: 6px;
+}
+.jobs-available2 {
+  margin: 0;
+  font-size: var(--font-size-smi);
+  color: var(--color-lightsteelblue-300);
+}
+.legal-services-2500-container {
+  height: 44px;
+  width: 126px;
+  position: relative;
+  font-weight: 600;
+  display: inline-block;
+  z-index: 1;
+}
+.category5 {
+  margin: 0 !important;
+  position: absolute;
+  top: 183px;
+  left: 839px;
+  border-radius: var(--br-8xs);
+  background-color: var(--gray-00);
+  box-shadow: 2px 2px 6.1px rgba(0, 0, 0, 0.37);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: var(--padding-7xs) var(--padding-17xl) var(--padding-xs)
+    var(--padding-3xs);
+  gap: var(--gap-xs);
+  text-align: left;
+  font-size: var(--body-large-500-size);
+  color: var(--main);
+  font-family: var(--font-outfit);
+}
+
+@media screen and (max-width: 1050px) {
+  .category5 {
+    flex-wrap: wrap;
+  }
+}

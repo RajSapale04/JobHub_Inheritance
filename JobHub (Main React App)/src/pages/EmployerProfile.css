@@ -1,0 +1,589 @@
+.status-action-frame-child {
+  height: 51px;
+  width: 290px;
+  position: relative;
+  background-color: var(--color-gray-300);
+  border-left: 5px solid var(--main);
+  box-sizing: border-box;
+  display: none;
+}
+.stack-icon {
+  height: 25px;
+  width: 25px;
+  position: relative;
+  z-index: 1;
+}
+.overview {
+  border: none;
+  outline: none;
+  font-weight: 500;
+  font-family: var(--font-outfit);
+  font-size: var(--text-xl-medium-size);
+  background-color: transparent;
+  height: 20px;
+  width: 84px;
+  position: relative;
+  line-height: 20px;
+  color: var(--main);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+.status-action-frame {
+  align-self: stretch;
+  background-color: var(--color-gray-300);
+  border-left: 5px solid var(--main);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-smi) var(--padding-2xs);
+  gap: var(--gap-mini);
+}
+.status-action-frame-item {
+  height: 51px;
+  width: 285px;
+  position: relative;
+  background-color: var(--color-gray-400);
+  display: none;
+}
+.briefcase-1-icon {
+  height: 25px;
+  width: 25px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.my-jobs {
+  border: none;
+  outline: none;
+  font-weight: 500;
+  font-family: var(--font-outfit);
+  font-size: var(--text-xl-medium-size);
+  background-color: transparent;
+  height: 20px;
+  width: 72px;
+  position: relative;
+  line-height: 20px;
+  color: var(--main);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+.status-action-frame1 {
+  align-self: stretch;
+  background-color: var(--color-gray-400);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-smi) var(--padding-2xs);
+  gap: var(--gap-mini);
+}
+.saves-candidates {
+  margin: 0;
+  height: 20px;
+  width: 158px;
+  position: relative;
+  font-size: inherit;
+  line-height: 20px;
+  font-weight: 500;
+  font-family: inherit;
+  display: inline-block;
+  z-index: 1;
+}
+.status-action-frame2 {
+  align-self: stretch;
+  background-color: var(--color-gray-400);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-smi);
+  gap: var(--gap-smi);
+  white-space: nowrap;
+}
+.plans-billing {
+  border: none;
+  outline: none;
+  font-weight: 500;
+  font-family: var(--font-outfit);
+  font-size: var(--text-xl-medium-size);
+  background-color: transparent;
+  height: 20px;
+  width: 123px;
+  position: relative;
+  line-height: 20px;
+  color: var(--main);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+.status-action-frame3 {
+  align-self: stretch;
+  background-color: var(--color-gray-400);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-smi);
+  gap: var(--gap-smi);
+}
+.status-action-frame-child1 {
+  height: 51px;
+  width: 285px;
+  position: relative;
+  background-color: var(--color-gray-400);
+  display: none;
+  z-index: 0;
+}
+.status-action-frame-child2 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: var(--color-gray-400);
+  z-index: 1;
+}
+.setting-fill-icon {
+  height: 25px;
+  width: 25px;
+  position: relative;
+  object-fit: cover;
+  z-index: 2;
+}
+.settings {
+  border: none;
+  outline: none;
+  font-weight: 500;
+  font-family: var(--font-outfit);
+  font-size: var(--text-xl-medium-size);
+  background-color: transparent;
+  height: 20px;
+  width: 69px;
+  position: relative;
+  line-height: 20px;
+  color: var(--main);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+.status-action-frame4 {
+  align-self: stretch;
+  background-color: var(--color-gray-400);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-smi);
+  position: relative;
+  gap: var(--gap-smi);
+}
+.view-all {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-mid);
+}
+.recently-posted-jobs {
+  width: 285px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-mini) 0px 0px;
+  box-sizing: border-box;
+}
+.edit-profile-frame {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-27xl);
+  max-width: 100%;
+}
+.child {
+  height: 55px;
+  width: 289px;
+  position: relative;
+  background-color: var(--color-gray-400);
+  border: 2px solid var(--main);
+  box-sizing: border-box;
+  display: none;
+  z-index: 0;
+}
+.profile-pic-rectangle {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0px;
+  right: -7.5px;
+  bottom: -8px;
+  left: -0.5px;
+  background-color: var(--color-gray-400);
+  border: 2px solid var(--main);
+  box-sizing: border-box;
+  z-index: 1;
+}
+.log-out {
+  margin: 0;
+  height: 20px;
+  width: 72px;
+  position: relative;
+  font-size: inherit;
+  line-height: 20px;
+  font-weight: 500;
+  font-family: inherit;
+  display: inline-block;
+  z-index: 2;
+}
+.div {
+  width: 289px;
+  background-color: var(--color-gray-400);
+  border: 2px solid var(--main);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-base) var(--padding-xl) var(--padding-mini)
+    var(--padding-2xl);
+  position: relative;
+}
+.microsoft-logo {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+.microsoft-1-icon {
+  height: 55px;
+  width: 55px;
+  position: relative;
+  object-fit: cover;
+  z-index: 1;
+}
+.front-end-developer {
+  margin: 0;
+  height: 24px;
+  width: 187px;
+  position: relative;
+  font-size: inherit;
+  line-height: 24px;
+  font-weight: 500;
+  font-family: inherit;
+  display: inline-block;
+  z-index: 1;
+}
+.full-time {
+  height: 12px;
+  width: 62px;
+  position: relative;
+  line-height: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-block;
+}
+.type {
+  width: 78px;
+  border-radius: var(--br-10xs);
+  background-color: var(--success-50);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-9xs);
+  box-sizing: border-box;
+  z-index: 2;
+  font-size: var(--text-xs-medium-size);
+  color: var(--success-500);
+}
+.location-dot {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-2xs);
+}
+.mappin-icon {
+  height: 18px;
+  width: 18px;
+  position: relative;
+  z-index: 1;
+}
+.dhaka-bangladesh {
+  height: 20px;
+  width: 165px;
+  position: relative;
+  line-height: 20px;
+  display: inline-block;
+  z-index: 1;
+}
+.mappin-parent {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px 0px 0px 0px;
+  gap: var(--gap-9xs);
+}
+.expired {
+  height: 20px;
+  width: 45px;
+  position: relative;
+  line-height: 20px;
+  color: var(--danger-500);
+  display: inline-block;
+  z-index: 1;
+}
+.dhaka-text {
+  width: 208px;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: var(--body-small-400-size);
+  color: var(--gray-500);
+}
+.front-end-developer-label {
+  height: 57px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+}
+.job-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0px 55px 0px 0px;
+  box-sizing: border-box;
+  gap: var(--gap-5xl);
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--text-xl-medium-size);
+}
+.job3-child {
+  height: 20px;
+  width: 78px;
+  display: none;
+  z-index: 2;
+}
+.applicants {
+  width: 93px;
+  height: 20px;
+  position: relative;
+  line-height: 20px;
+  font-weight: 500;
+  display: inline-block;
+  z-index: 1;
+}
+.applicant-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-8xs) 0px 0px;
+  color: var(--color-darkslategray-100);
+}
+.expire {
+  height: 20px;
+  width: 43px;
+  position: relative;
+  line-height: 20px;
+  font-weight: 500;
+  display: inline-block;
+  z-index: 1;
+}
+.view-applications {
+  height: 20px;
+  width: 130px;
+  position: relative;
+  font-size: var(--body-medium-400-size);
+  line-height: 20px;
+  font-weight: 500;
+  font-family: var(--font-outfit);
+  color: var(--main);
+  text-align: right;
+  display: inline-block;
+}
+.view-button {
+  cursor: pointer;
+  border: none;
+  padding: var(--padding-2xs) var(--padding-lg) var(--padding-2xs)
+    var(--padding-3xl);
+  background-color: var(--color-lightsteelblue-400);
+  border-radius: var(--br-8xs);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  z-index: 3;
+}
+.view-button:hover {
+  background-color: var(--color-lightslategray-500);
+}
+.expire-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-12xl);
+}
+.job3-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-10xs) 0px 0px;
+  color: #e56767;
+}
+.job3 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding-lgi) 0px var(--padding-3xl) var(--padding-3xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-xl);
+  max-width: 100%;
+}
+.job3-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0px 0px var(--padding-9xs);
+  box-sizing: border-box;
+  min-width: 640px;
+  max-width: 100%;
+  text-align: right;
+  font-size: var(--body-medium-400-size);
+}
+.logout-button {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: var(--gap-23xl);
+  max-width: 100%;
+}
+.edit-profile-frame-parent {
+  width: 1355px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0px var(--padding-xl);
+  box-sizing: border-box;
+  gap: var(--gap-8xl);
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--text-xl-medium-size);
+  color: var(--main);
+  font-family: var(--font-outfit);
+}
+.employer-profile {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-ghostwhite-200);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-12xl);
+  letter-spacing: normal;
+}
+
+@media screen and (max-width: 1050px) {
+  .job3 {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 750px) {
+  .edit-profile-frame {
+    gap: var(--gap-4xl);
+  }
+
+  .job3-wrapper {
+    min-width: 100%;
+  }
+
+  .logout-button {
+    gap: var(--gap-2xl);
+  }
+
+  .employer-profile {
+    gap: var(--gap-mini);
+  }
+}
+@media screen and (max-width: 450px) {
+  .overview {
+    font-size: var(--body-medium-400-size);
+    line-height: 16px;
+  }
+
+  .my-jobs {
+    font-size: var(--body-medium-400-size);
+    line-height: 16px;
+  }
+
+  .plans-billing {
+    font-size: var(--body-medium-400-size);
+    line-height: 16px;
+  }
+
+  .settings {
+    font-size: var(--body-medium-400-size);
+    line-height: 16px;
+  }
+
+  .log-out {
+    font-size: var(--body-medium-400-size);
+    line-height: 16px;
+  }
+
+  .front-end-developer {
+    font-size: var(--body-medium-400-size);
+    line-height: 19px;
+  }
+
+  .job-card {
+    flex-wrap: wrap;
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}

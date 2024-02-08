@@ -1,0 +1,338 @@
+.background-child {
+  align-self: stretch;
+  height: 3765px;
+  position: relative;
+  background-color: var(--color-whitesmoke-200);
+  display: none;
+}
+.category9-child {
+  height: 70px;
+  width: 236px;
+  position: relative;
+  border-radius: var(--br-8xs);
+  background-color: var(--gray-00);
+  box-shadow: 2px 2px 6.1px rgba(0, 0, 0, 0.37);
+  display: none;
+}
+.businessman-1-icon {
+  height: 52px;
+  width: 52px;
+  position: relative;
+  border-radius: var(--br-8xs);
+  object-fit: contain;
+  z-index: 1;
+}
+.security {
+  margin-block-start: 0;
+  margin-block-end: 6px;
+}
+.jobs-available {
+  margin: 0;
+  font-size: var(--font-size-smi);
+  color: var(--color-lightsteelblue-300);
+}
+.security-500-jobs-container {
+  height: 44px;
+  width: 119px;
+  position: relative;
+  font-weight: 600;
+  display: inline-block;
+  z-index: 1;
+}
+.category9 {
+  margin: 0 !important;
+  position: absolute;
+  top: 316px;
+  left: 1163px;
+  border-radius: var(--br-8xs);
+  background-color: var(--gray-00);
+  box-shadow: 2px 2px 6.1px rgba(0, 0, 0, 0.37);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: var(--padding-7xs) var(--padding-24xl) var(--padding-xs)
+    var(--padding-3xs);
+  gap: var(--gap-xs);
+}
+.categories {
+  align-self: stretch;
+  height: 436px;
+  background: linear-gradient(180deg, #5e6287, #a5a7c0);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--padding-31xl) 444px var(--padding-31xl) 437px;
+  box-sizing: border-box;
+  position: relative;
+  gap: 88px;
+  z-index: 1;
+  text-align: left;
+  font-size: var(--body-large-500-size);
+  color: var(--main);
+  font-family: var(--font-outfit);
+}
+.pngtreekorea-talent-recruitme {
+  height: 634px;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  object-fit: contain;
+  min-width: 412px;
+  z-index: 1;
+}
+.about-us {
+  height: 25px;
+  width: 84px;
+  position: relative;
+  font-size: var(--text-xl-medium-size);
+  font-weight: 600;
+  font-family: var(--font-outfit);
+  color: var(--main);
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+.frame-learn-more-about-job-hub {
+  cursor: pointer;
+  border: none;
+  padding: var(--padding-5xs) var(--padding-16xl) var(--padding-5xs) 40px;
+  background-color: var(--color-lightsteelblue-100);
+  border-radius: var(--br-8xs);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  z-index: 1;
+}
+.frame-learn-more-about-job-hub:hover {
+  background-color: var(--color-lightslategray-300);
+}
+.learn-more-about {
+  margin: 0;
+  width: 553px;
+  height: 58px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  z-index: 1;
+}
+.welcome-to-jobhub {
+  margin: 0;
+}
+.welcome-to-jobhub-container {
+  width: 618px;
+  height: 110px;
+  position: relative;
+  font-size: 17.5px;
+  color: var(--color-slategray-400);
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+.help-support-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-mini);
+  max-width: 100%;
+}
+.about-us-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+  max-width: 100%;
+}
+.circle-wavy-check-duotone-1 {
+  margin: 0;
+  width: 26px;
+  height: 26px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.circle-wavy-check-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-6xl);
+}
+.top-companies-and {
+  width: 234px;
+  height: 24px;
+  position: relative;
+  font-weight: 600;
+  display: inline-block;
+  z-index: 1;
+}
+.secured-jobs {
+  width: 113px;
+  height: 24px;
+  position: relative;
+  font-weight: 600;
+  display: inline-block;
+  z-index: 1;
+}
+.help-support {
+  width: 129px;
+  height: 24px;
+  position: relative;
+  font-weight: 600;
+  display: inline-block;
+  z-index: 1;
+}
+.dashboard-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-9xl);
+}
+.circle-wavy-check-frame-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-2xs);
+}
+.learn-more {
+  height: 25px;
+  width: 109px;
+  position: relative;
+  font-size: var(--text-xl-medium-size);
+  font-weight: 600;
+  font-family: var(--font-outfit);
+  color: var(--color-lightgray-200);
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+.learn-more-wrapper {
+  cursor: pointer;
+  border: none;
+  padding: var(--padding-5xs) var(--padding-4xl) var(--padding-5xs)
+    var(--padding-8xl);
+  background-color: var(--main);
+  border-radius: var(--br-8xs);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  z-index: 1;
+}
+.learn-more-wrapper:hover {
+  background-color: var(--color-slategray-300);
+}
+.learn-more-button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-42xl);
+  text-align: center;
+  font-size: var(--font-size-lgi);
+}
+.about-us-frame-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 99px;
+  min-width: 619px;
+  max-width: 100%;
+}
+.pngtreekorea-talent-recruitme-parent {
+  width: 1303px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0px var(--padding-xl) var(--padding-9xl);
+  box-sizing: border-box;
+  gap: var(--gap-3xs);
+  max-width: 100%;
+  text-align: left;
+  font-size: 46px;
+  color: var(--main);
+  font-family: var(--font-outfit);
+}
+.background {
+  flex: 1;
+  background-color: var(--color-whitesmoke-200);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.main-page {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0px var(--padding-10xs) 0px var(--padding-12xs);
+  box-sizing: border-box;
+  letter-spacing: normal;
+}
+
+@media screen and (max-width: 1050px) {
+  .category9 {
+    flex-wrap: wrap;
+  }
+
+  .categories {
+    height: auto;
+    min-height: 436;
+  }
+
+  .about-us-frame-parent {
+    flex: 1;
+  }
+
+  .pngtreekorea-talent-recruitme-parent {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 750px) {
+  .pngtreekorea-talent-recruitme {
+    min-width: 100%;
+  }
+
+  .learn-more-about {
+    font-size: 37px;
+  }
+
+  .about-us-frame-parent {
+    gap: var(--gap-30xl);
+    min-width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .learn-more-about {
+    font-size: var(--font-size-9xl);
+  }
+
+  .learn-more-button {
+    gap: var(--gap-11xl);
+  }
+
+  .about-us-frame-parent {
+    gap: var(--gap-6xl);
+  }
+}

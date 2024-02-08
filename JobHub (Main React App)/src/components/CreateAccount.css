@@ -1,0 +1,73 @@
+.user-plus-duotone-1-icon {
+  height: 32px;
+  width: 32px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.icon {
+  cursor: pointer;
+  border: none;
+  padding: var(--padding-xl);
+  background-color: var(--gray-00);
+  width: 72px;
+  height: 72px;
+  border-radius: var(--br-61xl);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.create-account1 {
+  align-self: stretch;
+  height: 28px;
+  position: relative;
+  line-height: 28px;
+  font-weight: 500;
+  display: inline-block;
+}
+.aliquam-facilisis-egestas {
+  align-self: stretch;
+  height: 40px;
+  position: relative;
+  font-size: var(--body-small-400-size);
+  line-height: 20px;
+  color: var(--gray-500);
+  display: inline-block;
+}
+.quick-link-employers {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+}
+.arrows-icon {
+  width: 222px;
+  height: 48px;
+  position: absolute;
+  margin: 0 !important;
+  top: 4px;
+  right: -123px;
+  z-index: 1;
+}
+.create-account {
+  flex: 1;
+  border-radius: var(--br-xs);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-5xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-5xl);
+  min-width: 284px;
+  max-width: 312px;
+  text-align: center;
+  font-size: var(--body-large-500-size);
+  color: var(--main);
+  font-family: var(--font-outfit);
+}
