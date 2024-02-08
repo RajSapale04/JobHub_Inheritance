@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./LeftSide8Column.css";
+import axios from 'axios';
+
 
 const LeftSide8Column = ({
   welcomeBack,
@@ -9,6 +11,13 @@ const LeftSide8Column = ({
   dontYouHaveAnAccount,
   signUp,
 }) => {
+
+  const signUp = async ()=>{
+    const response = await axios.post('http://localhost:4000/user/signup',{
+      params:
+    })
+  }
+  
   const [placeholderTextValue, setPlaceholderTextValue] = useState("");
   const [placeholderText1Value, setPlaceholderText1Value] = useState("");
   return (
