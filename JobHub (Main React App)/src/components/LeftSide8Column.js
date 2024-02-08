@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./LeftSide8Column.css";
+import { Link } from 'react-router-dom';
+
 
 const LeftSide8Column = ({
   welcomeBack,
@@ -17,7 +19,7 @@ const LeftSide8Column = ({
         <div className="welcome-back-parent">
           <h1 className="welcome-back-container">
             <span className="welcome-back">{welcomeBack}</span>
-            <span> 👋</span>
+            <span> </span>
           </h1>
           <div className="today-is-a-container">
             <span>
@@ -79,7 +81,8 @@ const LeftSide8Column = ({
         <div className="dont-you-have-container">
           <span className="dont-you-have-container1">
             <span>{dontYouHaveAnAccount}</span>
-            <span className="sign-up">{signUp}</span>
+            <Link to="/sign-up-page">
+            <span className="sign-up">{signUp}</span></Link>
           </span>
         </div>
       </div>

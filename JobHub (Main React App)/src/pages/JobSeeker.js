@@ -1,5 +1,7 @@
 import Hero1 from "../components/Hero1";
 import "./JobSeeker.css";
+import { Link } from 'react-router-dom';
+
 
 const JobSeeker = () => {
   return (

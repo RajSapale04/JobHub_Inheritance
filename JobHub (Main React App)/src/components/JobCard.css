@@ -20,6 +20,13 @@
   white-space: nowrap;
   z-index: 1;
 }
+.we {
+  text-decoration: none;
+  color: var(--color-darkslategray-100);
+}
+.get{
+  text-decoration: none;
+}
 .features {
   width: 77px;
   height: 25px;

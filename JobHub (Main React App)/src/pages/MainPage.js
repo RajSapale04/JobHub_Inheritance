@@ -4,6 +4,8 @@ import Category from "../components/Category";
 import FeaturedJobs from "../components/FeaturedJobs";
 import FrameComponent2 from "../components/FrameComponent2";
 import ContactInfoFrame from "../components/ContactInfoFrame";
+import { Link } from 'react-router-dom';
+
 import "./MainPage.css";
 
 const MainPage = () => {

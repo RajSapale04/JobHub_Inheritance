@@ -20,6 +20,10 @@
   align-items: center;
   white-space: nowrap;
 }
+.job {
+  text-decoration: none;
+  color: var(--color-darkslategray-100) ;
+}
 .already-registered {
   height: 24.3px;
   width: 221px;

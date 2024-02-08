@@ -1,5 +1,7 @@
 import Navigation2 from "../components/Navigation2";
 import FrameContainer from "../components/FrameContainer";
+import { Link } from 'react-router-dom';
+
 import "./JobList.css";
 
 const JobList = () => {

@@ -235,7 +235,7 @@
   bottom: -8px;
   left: -0.5px;
   background-color: var(--color-gray-400);
-  border: 2px solid var(--main);
+ 
   box-sizing: border-box;
   z-index: 1;
 }

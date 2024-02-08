@@ -1,5 +1,7 @@
 import Hero from "../components/Hero";
 import "./Employer.css";
+import { Link } from 'react-router-dom';
+
 
 const Employer = () => {
   return (
@@ -10,11 +12,14 @@ const Employer = () => {
           <b className="jobhub">JobHub</b>
           <div className="already-registered">Already Registered?</div>
           <div className="navbar-child" />
-          <h3 className="jobhub1">JobHub</h3>
+          <Link class="job" to="/">
+          <h3 className="jobhub1">JobHub</h3></Link>
           <div className="job-hub-frame">
             <div className="already-registered1">Already Registered?</div>
             <button className="login-here-text">
+              <Link to="/login-page">
               <div className="login-here">Login Here</div>
+              </Link>
             </button>
           </div>
         </header>

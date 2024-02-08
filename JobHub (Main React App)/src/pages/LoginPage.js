@@ -1,4 +1,6 @@
 import LeftSide8Column from "../components/LeftSide8Column";
+import { Link } from 'react-router-dom';
+
 import "./LoginPage.css";
 
 const LoginPage = () => {

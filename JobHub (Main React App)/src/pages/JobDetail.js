@@ -3,6 +3,8 @@ import ContactChild from "../components/ContactChild";
 import Info from "../components/Info";
 import FooterLinkContact from "../components/FooterLinkContact";
 import "./JobDetail.css";
+import { Link } from 'react-router-dom';
+
 
 const JobDetail = () => {
   return (

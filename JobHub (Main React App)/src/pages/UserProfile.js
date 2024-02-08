@@ -2,6 +2,8 @@ import { useState } from "react";
 import Navigation from "../components/Navigation";
 import StatusActionFrame from "../components/StatusActionFrame";
 import CopyRight from "../components/CopyRight";
+import { Link } from 'react-router-dom';
+
 import "./UserProfile.css";
 
 const UserProfile = () => {

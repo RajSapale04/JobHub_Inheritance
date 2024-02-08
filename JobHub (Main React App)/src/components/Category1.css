@@ -1,6 +1,6 @@
 .category1-child {
   height: 70px;
-  width: 236px;
+  width: 100%;
   position: relative;
   border-radius: var(--br-8xs);
   background-color: var(--gray-00);
@@ -51,6 +51,7 @@
   font-size: var(--body-large-500-size);
   color: var(--main);
   font-family: var(--font-outfit);
+  width: 250px;
 }
 
 @media screen and (max-width: 1050px) {

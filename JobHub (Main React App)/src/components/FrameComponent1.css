@@ -31,6 +31,20 @@
   font-size: var(--body-small-400-size);
   color: var(--color-gainsboro-200);
 }
+.nav-link1::placeholder {
+  color: var(--color-gainsboro-200);
+}
+.nav-link2::placeholder {
+  color: var(--color-gainsboro-200);
+}
+.nav-link4::placeholder {
+  color: var(--color-gainsboro-200);
+}
+.nav-link5::placeholder {
+  color: var(--color-gainsboro-200);
+}
+
+
 .nav-link2 {
   border: none;
   outline: none;

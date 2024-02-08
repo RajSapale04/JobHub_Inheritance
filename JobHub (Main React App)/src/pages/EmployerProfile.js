@@ -3,6 +3,8 @@ import FrameComponent1 from "../components/FrameComponent1";
 import FrameComponent from "../components/FrameComponent";
 import CopyRight from "../components/CopyRight";
 import "./EmployerProfile.css";
+import { Link } from 'react-router-dom';
+
 
 const EmployerProfile = () => {
   const [overviewTextValue, setOverviewTextValue] = useState("");

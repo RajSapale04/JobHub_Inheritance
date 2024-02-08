@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./JobCard.css";
+import { Link } from 'react-router-dom';
 
 const JobCard = () => {
   const [jobTitleKeywordValue, setJobTitleKeywordValue] = useState("");
@@ -9,7 +10,8 @@ const JobCard = () => {
       <div className="company-logo">
         <div className="navbar3">
           <header className="rectangle-header" />
-          <h1 className="jobhub7">JobHub</h1>
+          <Link class="we" to="/">
+          <h1 className="jobhub7">JobHub</h1></Link>
           <div className="salary-info">
             <div className="features-wrapper">
               <div className="features">Features</div>
@@ -24,10 +26,12 @@ const JobCard = () => {
               <div className="about2">About</div>
             </div>
             <button className="login-wrapper">
-              <div className="login">Login</div>
+              <Link to="/login-page">
+              <div className="login">Login</div></Link>
             </button>
             <button className="get-started-wrapper">
-              <div className="get-started">Get Started</div>
+              <Link class="get" to="/sign-up-page">
+              <div className="get-started">Get Started</div></Link>
             </button>
           </div>
         </div>
@@ -93,7 +97,8 @@ const JobCard = () => {
                     />
                   </div>
                   <button className="button6">
-                    <div className="find-job">Find Job</div>
+                    <Link to="/job-list">
+                    <div className="find-job">Find Job</div></Link>
                   </button>
                 </form>
               </div>

@@ -1,4 +1,6 @@
 import Job3 from "./Job3";
+import { Link } from 'react-router-dom';
+
 import "./FeaturedJobs.css";
 
 const FeaturedJobs = () => {
@@ -161,7 +163,9 @@ const FeaturedJobs = () => {
           />
         </div>
         <button className="more-jobs-wrapper">
-          <div className="more-jobs">More Jobs</div>
+        <Link to="/job-list">
+
+          <div className="more-jobs">More Jobs</div></Link>
         </button>
       </div>
     </section>

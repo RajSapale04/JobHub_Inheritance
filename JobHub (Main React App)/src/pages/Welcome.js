@@ -1,4 +1,6 @@
 import Hero2 from "../components/Hero2";
+import { Link } from 'react-router-dom';
+
 import "./Welcome.css";
 
 const Welcome = () => {
@@ -14,7 +16,8 @@ const Welcome = () => {
           <div className="main-frame1">
             <div className="already-registered5">Already Registered?</div>
             <button className="login-button">
-              <div className="login-here2">Login Here</div>
+              <Link to="/login-page">
+              <div className="login-here2">Login Here</div></Link>
             </button>
           </div>
         </header>
