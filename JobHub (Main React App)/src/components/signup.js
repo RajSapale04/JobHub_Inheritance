@@ -1,43 +1,44 @@
 import { useState } from "react";
 import "./LeftSide8Column.css";
-import axios from 'axios';
+import { Link } from "react-router-dom";
+import { useSignup } from "../hooks/useSignup";
+import { useNavigate } from "react-router-dom";
 
-
-const LeftSide8Column = ({
-  welcomeBack,
-  signIn,
-  google,
-  facebook,
-  dontYouHaveAnAccount,
-  signUp,
+const Signup = ({
+  user
 }) => {
 
-  const signUp = async ()=>{
-    const response = await axios.post('http://localhost:4000/user/signup',{
-      params:
-    })
-  }
+  const navigate = useNavigate()
+  const [email, setemail] = useState("");
+  const [password, setpassword] = useState("");
+  const {signup, error, isLoading} = useSignup()
   
-  const [placeholderTextValue, setPlaceholderTextValue] = useState("");
-  const [placeholderText1Value, setPlaceholderText1Value] = useState("");
+  const handleSubmit = async (e)=>{
+    e.preventDefault()
+    await signup(email, password , user)
+    navigate(`/${user}`)
+
+  }
+
+
   return (
     <div className="left-side-8-column">
       <div className="frame-parent4">
         <div className="welcome-back-parent">
           <h1 className="welcome-back-container">
-            <span className="welcome-back">{welcomeBack}</span>
+            <span className="welcome-back">welcome {user}</span>
             <span> 👋</span>
           </h1>
           <div className="today-is-a-container">
             <span>
               <p className="today-is-a">{`Today is a new day. It's your day. You shape it. `}</p>
               <p className="today-is-a">
-                Sign in to start growing your career.
+                Sign up to start growing your career.
               </p>
             </span>
           </div>
         </div>
-        <form className="input-parent">
+        <form className="input-parent" onSubmit={handleSubmit}>
           <div className="input">
             <div className="label20">Email</div>
             <div className="input1">
@@ -45,10 +46,10 @@ const LeftSide8Column = ({
               <input
                 className="placeholder"
                 placeholder="Example@email.com"
-                type="text"
-                value={placeholderTextValue}
+                type="email"
+                value={email}
                 onChange={(event) =>
-                  setPlaceholderTextValue(event.target.value)
+                  setemail(event.target.value)
                 }
               />
             </div>
@@ -60,20 +61,21 @@ const LeftSide8Column = ({
               <input
                 className="placeholder1"
                 placeholder="at least 8 characters"
-                type="text"
-                value={placeholderText1Value}
+                type="password"
+                value={password}
                 onChange={(event) =>
-                  setPlaceholderText1Value(event.target.value)
+                  setpassword(event.target.value)
                 }
               />
             </div>
           </div>
-          <div className="forgot-password">Forgot Password?</div>
-          <button className="main-button">
-            <div className="sign-in">{signIn}</div>
+
+          <button type="submit" disabled={isLoading}   className="main-button">
+            <div className="sign-in">sign up</div>
           </button>
+          {error && <div>{error}</div>}
         </form>
-        <div className="login-frame1">
+        {/* <div className="login-frame1">
           <div className="or-line">
             <div className="sign-up-call" />
             <div className="or">Or</div>
@@ -84,11 +86,14 @@ const LeftSide8Column = ({
             <img className="facebook-icon" alt="" src={facebook} />
             <div className="sign-in-with">Sign in with Google</div>
           </button>
-        </div>
+        </div> */}
         <div className="dont-you-have-container">
           <span className="dont-you-have-container1">
-            <span>{dontYouHaveAnAccount}</span>
-            <span className="sign-up">{signUp}</span>
+            <span>Already have an account?</span>
+            <Link to={`/${user}/login`}>
+
+            <span className="sign-up">Login</span>
+            </Link>
           </span>
         </div>
       </div>
@@ -99,4 +104,4 @@ const LeftSide8Column = ({
   );
 };
 
-export default LeftSide8Column;
+export default Signup;

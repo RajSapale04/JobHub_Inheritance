@@ -1,5 +1,5 @@
 import "./Hero2.css";
-
+import { Link } from "react-router-dom";
 const Hero2 = () => {
   return (
     <div className="hero2">
@@ -16,11 +16,17 @@ const Hero2 = () => {
       </div>
       <div className="employer-title">
         <div className="jobseeker-label">
+          <Link to={'/user/login'}>
+
           <div className="jobseeker1">Jobseeker</div>
+          </Link>
         </div>
       </div>
       <div className="employer-container">
+        <Link to={'/company/login'}>
+
         <div className="jobseeker1">Employer</div>
+        </Link>
       </div>
     </div>
   );

@@ -94,10 +94,10 @@ function App() {
       <Route path="/user-profile" element={<UserProfile />} />
       <Route path="/job-detail" element={<JobDetail />} />
       <Route path="/job-list" element={<JobList />} />
-      <Route path="/sign-up-page" element={<SignUpPage />} />
-      <Route path="/login-page" element={<LoginPage />} />
-      <Route path="/employer" element={<Employer />} />
-      <Route path="/jobseeker" element={<JobSeeker />} />
+      <Route path="/:user/signup" element={<SignUpPage />} />
+      <Route path="/:user/login" element={<LoginPage />} />
+      <Route path="/company" element={<Employer />} />
+      <Route path="/user" element={<JobSeeker />} />
       <Route path="/welcome" element={<Welcome />} />
       <Route path="/employer-profile" element={<EmployerProfile />} />
     </Routes>

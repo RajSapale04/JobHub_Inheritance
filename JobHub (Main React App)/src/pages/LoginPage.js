@@ -1,17 +1,14 @@
-import LeftSide8Column from "../components/LeftSide8Column";
+import Login from "../components/login";
 import "./LoginPage.css";
+import { useParams } from "react-router-dom";
 
 const LoginPage = () => {
+  const {user}= useParams();
   return (
     <div className="login-page">
       <main className="main-container1">
-        <LeftSide8Column
-          welcomeBack="Welcome Back "
-          signIn="Sign in"
-          google="/google.svg"
-          facebook="/facebook.svg"
-          dontYouHaveAnAccount="Don't you have an account? "
-          signUp="Sign up"
+        <Login
+          user={user}
         />
         <div className="art1">
           <img

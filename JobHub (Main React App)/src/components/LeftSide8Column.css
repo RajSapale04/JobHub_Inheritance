@@ -126,18 +126,7 @@
   align-items: center;
   z-index: 1;
 }
-.forgot-password {
-  width: 132px;
-  height: 16px;
-  position: relative;
-  font-size: var(--body-medium-400-size);
-  letter-spacing: 0.01em;
-  line-height: 100%;
-  font-family: var(--font-roboto);
-  color: var(--link);
-  text-align: center;
-  display: inline-block;
-}
+
 .sign-in {
   height: 20px;
   width: 62px;
