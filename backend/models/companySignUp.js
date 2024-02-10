@@ -40,10 +40,7 @@ const companySchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  designation: {
-    type: String,
-    required: true
-  },
+
   companyVerification: {
     filename: String,
     contentType: String,

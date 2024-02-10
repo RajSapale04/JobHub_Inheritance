@@ -2,6 +2,7 @@ const User =require('../models/userModel')
 const jwt = require('jsonwebtoken')
 const UserProfile = require('../models/UserSignUp')
 const Job = require('../models/postJob')
+const mongoose = require('mongoose')
 
 const createToken=(_id)=>{
     return jwt.sign({_id},process.env.SECRET,{expiresIn:'1d'})
@@ -41,9 +42,12 @@ const signupUser = async (req,res) =>{
 
 const createUser = async (req,res)=>{
     const user_id = req.user._id
+    const _id = new mongoose.Types.ObjectId(user_id)
  
     try{
-        const user = await UserProfile.create({...req.body,user_id})
+        const userS = await User.findById({_id})
+        const email = userS.email
+        const user = await UserProfile.create({...req.body,email,user_id})
         res.status(200).json(user)
 
     } catch(error){

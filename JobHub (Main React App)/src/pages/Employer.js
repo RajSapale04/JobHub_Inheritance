@@ -7,22 +7,22 @@ const Employer = () => {
       <div className="first-name-frame">
         <img className="background-icon" alt="" src="/background.svg" />
         <header className="navbar">
-          <b className="jobhub">JobHub</b>
+          {/* <b className="jobhub">JobHub</b>
           <div className="already-registered">Already Registered?</div>
-          <div className="navbar-child" />
+          <div className="navbar-child" /> */}
           <h3 className="jobhub1">JobHub</h3>
-          <div className="job-hub-frame">
+          {/* <div className="job-hub-frame">
             <div className="already-registered1">Already Registered?</div>
             <button className="login-here-text">
               <div className="login-here">Login Here</div>
             </button>
-          </div>
+          </div> */}
         </header>
         <div className="hero-section">
           <Hero />
         </div>
       </div>
-      <div className="home">Home</div>
+      {/* <div className="home">Home</div>
       <div className="find-candidates">Find Candidates</div>
       <div className="dashboard">Dashboard</div>
       <div className="my-jobs1">My Jobs</div>
@@ -272,8 +272,8 @@ const Employer = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
     </div>
   );
 };

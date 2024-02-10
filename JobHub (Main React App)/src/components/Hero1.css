@@ -263,7 +263,6 @@
   align-items: center;
 }
 .hero-section-frame {
-  height:;
   width: 188px;
   border-radius: var(--br-3xs);
   background-color: var(--color-darkslategray-100);
@@ -323,6 +322,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--color-darkslategray-100);
 }
 .register2 {
   width: 140px;

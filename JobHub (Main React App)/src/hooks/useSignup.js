@@ -22,7 +22,7 @@ export const useSignup = () => {
         setError(json.error || 'An unknown error occurred');
       }
     } catch (error) {
-      setError(error.response.data.error || 'An unknown error occurred');
+      setError(error.response.data.error)
     } finally {
       setIsLoading(false);
     }
