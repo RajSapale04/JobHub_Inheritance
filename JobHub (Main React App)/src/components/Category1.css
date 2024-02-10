@@ -1,0 +1,60 @@
+.category1-child {
+  height: 70px;
+  width: 236px;
+  position: relative;
+  border-radius: var(--br-8xs);
+  background-color: var(--gray-00);
+  box-shadow: 2px 2px 6.1px rgba(0, 0, 0, 0.37);
+  display: none;
+}
+.businessman-1-icon1 {
+  height: 52px;
+  width: 52px;
+  position: relative;
+  border-radius: var(--br-8xs);
+  object-fit: contain;
+  z-index: 1;
+}
+.marketing-sales {
+  margin-block-start: 0;
+  margin-block-end: 6px;
+}
+.jobs-available1 {
+  margin: 0;
+  font-size: var(--font-size-smi);
+  color: var(--color-lightsteelblue-300);
+}
+.marketing-sales-container {
+  height: 44px;
+  width: 155px;
+  position: relative;
+  font-weight: 600;
+  display: inline-block;
+  z-index: 1;
+}
+.category1 {
+  margin: 0 !important;
+  position: absolute;
+  width: 230px;
+  top: 50px;
+  left: 515px;
+  border-radius: var(--br-8xs);
+  background-color: var(--gray-00);
+  box-shadow: 2px 2px 6.1px rgba(0, 0, 0, 0.37);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 10px 20px 15px 10px;
+  gap: var(--gap-xs);
+  text-align: left;
+  font-size: var(--body-large-500-size);
+  color: var(--main);
+  font-family: var(--font-outfit);
+}
+
+@media screen and (max-width: 1050px) {
+  .category1 {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,171 @@
+.how-jobhub-works {
+  margin: 0;
+  width: 407px;
+  height: 48px;
+  position: relative;
+  font-size: inherit;
+  line-height: 48px;
+  font-weight: 500;
+  font-family: inherit;
+  display: inline-block;
+  max-width: 100%;
+}
+.icon2 {
+  height: 31.5px;
+  width: 31.5px;
+  position: relative;
+  object-fit: contain;
+}
+.icon1 {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--br-61xl);
+  background-color: var(--gray-00);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xl) var(--padding-lgi) var(--padding-xl)
+    var(--padding-xl);
+  box-sizing: border-box;
+}
+.phasellus-quis-eleifend {
+  align-self: stretch;
+  height: 40px;
+  position: relative;
+  font-size: var(--body-small-400-size);
+  line-height: 20px;
+  color: var(--gray-500);
+  display: inline-block;
+}
+.find-suitable-job-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+}
+.arrows-icon1 {
+  width: 222px;
+  height: 48px;
+  position: absolute;
+  margin: 0 !important;
+  top: 4px;
+  right: -123px;
+  z-index: 1;
+}
+.find-suitable-job {
+  flex: 1;
+  border-radius: var(--br-xs);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-5xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-5xl);
+  min-width: 284px;
+  max-width: 312px;
+}
+.circle-wavy-check-duotone-1-icon {
+  height: 32px;
+  width: 32px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.icon3 {
+  cursor: pointer;
+  border: none;
+  padding: var(--padding-xl);
+  background-color: var(--gray-00);
+  width: 72px;
+  height: 72px;
+  border-radius: var(--br-61xl);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.apply-job {
+  align-self: stretch;
+  height: 28px;
+  position: relative;
+  line-height: 28px;
+  font-weight: 500;
+  display: inline-block;
+}
+.apply-then {
+  flex: 1;
+  border-radius: var(--br-xs);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-5xl);
+  box-sizing: border-box;
+  gap: var(--gap-5xl);
+  min-width: 284px;
+  max-width: 312px;
+}
+.create-account-parent {
+  width: 1320px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--gap-5xl);
+  max-width: 100%;
+  font-size: var(--body-large-500-size);
+}
+.working {
+  flex: 1;
+  background-color: var(--color-ghostwhite-200);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-81xl) var(--padding-xl);
+  box-sizing: border-box;
+  gap: var(--gap-31xl);
+  max-width: 100%;
+  z-index: 1;
+}
+.working-wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0px 0px var(--padding-14xl);
+  box-sizing: border-box;
+  max-width: 100%;
+  text-align: center;
+  font-size: var(--font-size-29xl);
+  color: var(--main);
+  font-family: var(--font-outfit);
+}
+
+@media screen and (max-width: 750px) {
+  .how-jobhub-works {
+    font-size: var(--font-size-19xl);
+    line-height: 38px;
+  }
+
+  .working {
+    gap: var(--gap-6xl);
+    padding-top: var(--padding-46xl);
+    padding-bottom: var(--padding-46xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .how-jobhub-works {
+    font-size: var(--font-size-10xl);
+    line-height: 29px;
+  }
+}

@@ -1,0 +1,168 @@
+.briefcase-1-icon8 {
+  height: 40px;
+  width: 40px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 40px;
+}
+.jobpilot4 {
+  margin: 0;
+  height: 40px;
+  width: 85px;
+  position: relative;
+  font-size: inherit;
+  line-height: 40px;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+  white-space: nowrap;
+}
+.logo5 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.image-1-icon5 {
+  height: 16px;
+  width: 24px;
+  position: relative;
+  object-fit: cover;
+}
+.india2 {
+  height: 20px;
+  width: 36px;
+  position: relative;
+  line-height: 20px;
+  font-weight: 500;
+  display: inline-block;
+  white-space: nowrap;
+}
+.caretdown-icon2 {
+  height: 16px;
+  width: 16px;
+  position: relative;
+}
+.salary-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+}
+.map-pin-icon {
+  height: 32px;
+  width: 1px;
+  position: relative;
+  border-right: 1px solid var(--gray-100);
+  box-sizing: border-box;
+}
+.fisearch-icon2 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 24px;
+}
+.job-tittle-keyword2 {
+  height: 24px;
+  width: 224px;
+  position: relative;
+  line-height: 24px;
+  display: inline-block;
+  white-space: nowrap;
+}
+.fisearch-group {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+  font-size: var(--body-large-500-size);
+  color: var(--gray-400);
+}
+.parent-container {
+  height: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+  max-width: 100%;
+}
+.search2 {
+  flex: 1;
+  border-radius: var(--br-8xs);
+  background-color: var(--gray-00);
+  border: 1px solid var(--gray-100);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-4xs) var(--padding-5xl);
+  max-width: 100%;
+  font-size: var(--body-medium-400-size);
+}
+.quick-link2 {
+  width: 833px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-13xl);
+  max-width: 100%;
+}
+.bellringing-icon6 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+}
+.button-item {
+  height: 48px;
+  width: 48px;
+  position: relative;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.button3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-5xl);
+}
+.navigation6 {
+  align-self: stretch;
+  background-color: var(--gray-00);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-xl);
+  box-sizing: border-box;
+  gap: var(--gap-372xl);
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--display-xs-semibold-size);
+  color: var(--main);
+  font-family: var(--font-outfit);
+}
+
+@media screen and (max-width: 750px) {
+  .navigation6 {
+    gap: var(--gap-79xl);
+  }
+}
+@media screen and (max-width: 450px) {
+  .quick-link2 {
+    gap: var(--gap-base);
+  }
+
+  .navigation6 {
+    gap: var(--gap-30xl);
+  }
+}

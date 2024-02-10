@@ -1,0 +1,138 @@
+.job-description {
+  height: 28px;
+  flex: 1;
+  position: relative;
+  line-height: 28px;
+  font-weight: 500;
+  display: inline-block;
+  max-width: 100%;
+}
+.container {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0px 0px var(--padding-5xs);
+  box-sizing: border-box;
+  max-width: 100%;
+  font-size: var(--body-large-500-size);
+  color: var(--gray-900);
+}
+.velstar-is-a {
+  height: 48px;
+  flex: 1;
+  position: relative;
+  line-height: 24px;
+  display: inline-block;
+  max-width: 100%;
+}
+.velstar-is-a-shopify-plus-agen-wrapper {
+  width: 734px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0px 0px var(--padding-5xs);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.here-at-velstar {
+  height: 120px;
+  flex: 1;
+  position: relative;
+  line-height: 24px;
+  display: inline-block;
+  max-width: 100%;
+}
+.want-to-work {
+  height: 24px;
+  flex: 1;
+  position: relative;
+  line-height: 24px;
+  display: inline-block;
+  max-width: 100%;
+}
+.requirements {
+  align-self: stretch;
+  height: 24px;
+  position: relative;
+  line-height: 24px;
+  font-weight: 500;
+  display: inline-block;
+}
+.great-troubleshooting-and {
+  margin-bottom: 0px;
+}
+.great-troubleshooting-and-anal {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  padding-left: var(--padding-2xl);
+}
+.great-troubleshooting-and-container {
+  align-self: stretch;
+  height: 240px;
+  position: relative;
+  line-height: 24px;
+  color: var(--gray-600);
+  display: inline-block;
+}
+.requirements-parent {
+  width: 734px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0px 0px var(--padding-5xs);
+  box-sizing: border-box;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+  color: var(--gray-900);
+}
+.working-knowledge-of-container {
+  align-self: stretch;
+  height: 96px;
+  position: relative;
+  line-height: 24px;
+  color: var(--gray-600);
+  display: inline-block;
+}
+.benefits {
+  width: 734px;
+  height: 24px;
+  position: relative;
+  line-height: 24px;
+  font-weight: 500;
+  color: var(--gray-900);
+  display: inline-block;
+  max-width: 100%;
+}
+.early-finish-on-container {
+  width: 734px;
+  height: 312px;
+  position: relative;
+  line-height: 24px;
+  display: inline-block;
+  max-width: 100%;
+}
+.contact-child {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  min-width: 494px;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--body-medium-400-size);
+  color: var(--gray-600);
+  font-family: var(--font-outfit);
+}
+
+@media screen and (max-width: 750px) {
+  .contact-child {
+    min-width: 100%;
+  }
+}

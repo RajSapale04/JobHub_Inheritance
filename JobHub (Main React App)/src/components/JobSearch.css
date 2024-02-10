@@ -1,0 +1,31 @@
+.job-search-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .job-search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .job-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .job-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .job-item:hover {
+    background-color: #eaeaea;
+  }
+  

@@ -1,0 +1,147 @@
+.junior-graphic-designer {
+  align-self: stretch;
+  height: 28px;
+  position: relative;
+  line-height: 28px;
+  font-weight: 500;
+  display: inline-block;
+}
+.internship1 {
+  height: 12px;
+  width: 72px;
+  position: relative;
+  line-height: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-block;
+}
+.type8 {
+  border-radius: var(--br-10xs);
+  background-color: var(--success-50);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-9xs) var(--padding-5xs);
+}
+.salary-20000-4 {
+  height: 20px;
+  width: 175px;
+  position: relative;
+  font-size: var(--body-small-400-size);
+  line-height: 20px;
+  color: var(--gray-500);
+  display: inline-block;
+}
+.type-group {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  font-size: var(--text-xs-medium-size);
+  color: var(--success-500);
+  font-family: var(--body-small-400);
+}
+.heading4 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-7xs);
+}
+.linkedin-1-icon {
+  height: 48px;
+  width: 48px;
+  position: relative;
+  object-fit: cover;
+  min-height: 48px;
+}
+.linkedin-usa {
+  align-self: stretch;
+  height: 24px;
+  position: relative;
+  line-height: 24px;
+  font-weight: 500;
+  display: inline-block;
+}
+.mappin-icon8 {
+  height: 18px;
+  width: 18px;
+  position: relative;
+}
+.dhaka-bangladesh8 {
+  height: 20px;
+  flex: 1;
+  position: relative;
+  line-height: 20px;
+  display: inline-block;
+}
+.loaction2 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-9xs);
+  font-size: var(--body-small-400-size);
+  color: var(--gray-500);
+}
+.info3 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-9xs);
+  min-width: 188px;
+}
+.bookmarksimple-icon7 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+}
+.company2 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-xs);
+  font-size: var(--body-medium-400-size);
+}
+.job7 {
+  flex: 1;
+  border-radius: var(--br-5xs);
+  background-color: var(--gray-00);
+  box-shadow: 0px 2px 18px rgba(24, 25, 28, 0.03);
+  border: 1px solid var(--gray-100);
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-5xl) var(--padding-6xl) var(--padding-5xl)
+    var(--padding-4xl);
+  gap: var(--gap-xl);
+  min-width: 282px;
+  max-width: 100%;
+  z-index: 1;
+  text-align: left;
+  font-size: var(--text-xl-medium-size);
+  color: var(--main);
+  font-family: var(--font-outfit);
+}
+
+@media screen and (max-width: 450px) {
+  .junior-graphic-designer {
+    font-size: var(--body-medium-400-size);
+    line-height: 22px;
+  }
+
+  .company2 {
+    flex-wrap: wrap;
+  }
+}

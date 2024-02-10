@@ -1,0 +1,69 @@
+.screenshot-2024-02-02-004906-1 {
+  height: 1076px;
+  width: 816px;
+  position: relative;
+  border-radius: var(--br-8xs);
+  max-height: 100%;
+  object-fit: cover;
+  display: none;
+  max-width: 100%;
+}
+.art {
+  height: 890px;
+  flex: 1;
+  border-radius: var(--br-8xs);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-image: url("/public/screenshot-20240202-004906-1@2x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  min-width: 612px;
+  max-width: 100%;
+}
+.main-container {
+  flex: 1;
+  background-color: var(--main);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-13xl);
+  box-sizing: border-box;
+  gap: var(--gap-13xl);
+  max-width: 100%;
+}
+.sign-up-page {
+  width: 100%;
+  position: relative;
+  background-color: var(--gray-00);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: normal;
+}
+
+@media screen and (max-width: 1050px) {
+  .main-container {
+    padding-top: var(--padding-2xl);
+    padding-bottom: var(--padding-2xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 750px) {
+  .art {
+    min-width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .main-container {
+    gap: var(--gap-base);
+    padding-top: var(--padding-xl);
+    padding-bottom: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}

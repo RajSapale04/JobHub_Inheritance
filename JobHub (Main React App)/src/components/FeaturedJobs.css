@@ -1,0 +1,375 @@
+.featured-jobs-child {
+  width: 1920px;
+  height: 941px;
+  position: relative;
+  background: linear-gradient(180deg, #a5a7c0, #f0f0f5);
+  display: none;
+  max-width: 100%;
+}
+.featured-jobs1 {
+  margin: 0;
+  height: 50px;
+  width: 257px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+  z-index: 1;
+}
+.list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0px 0px 0px var(--padding-6xs);
+}
+.technical-support-specialist {
+  align-self: stretch;
+  height: 28px;
+  position: relative;
+  line-height: 28px;
+  font-weight: 500;
+  display: inline-block;
+}
+.part-time1 {
+  height: 12px;
+  width: 66px;
+  position: relative;
+  line-height: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-block;
+}
+.type9 {
+  border-radius: var(--br-10xs);
+  background-color: var(--success-50);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-9xs) var(--padding-5xs);
+}
+.salary-20000-5 {
+  height: 20px;
+  width: 175px;
+  position: relative;
+  font-size: var(--body-small-400-size);
+  line-height: 20px;
+  color: var(--gray-500);
+  display: inline-block;
+}
+.frame-node {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  font-size: var(--text-xs-medium-size);
+  color: var(--success-500);
+  font-family: var(--body-small-400);
+}
+.heading5 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-7xs);
+}
+.employers-logo-icon2 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.employers-logo3 {
+  border-radius: var(--br-9xs);
+  background-color: var(--gray-scale-50);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xs);
+}
+.mappin-icon9 {
+  height: 18px;
+  width: 18px;
+  position: relative;
+}
+.dhaka-bangladesh9 {
+  height: 20px;
+  flex: 1;
+  position: relative;
+  line-height: 20px;
+  display: inline-block;
+}
+.loaction3 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-9xs);
+  font-size: var(--body-small-400-size);
+  color: var(--gray-500);
+}
+.info4 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-9xs);
+  min-width: 188px;
+}
+.bookmarksimple-icon8 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+}
+.company3 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-xs);
+  font-size: var(--body-medium-400-size);
+}
+.job8 {
+  flex: 1;
+  border-radius: var(--br-5xs);
+  background-color: var(--gray-00);
+  box-shadow: 0px 2px 18px rgba(24, 25, 28, 0.03);
+  border: 1px solid var(--gray-100);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-5xl) var(--padding-6xl) var(--padding-5xl)
+    var(--padding-4xl);
+  gap: var(--gap-xl);
+  min-width: 282px;
+  max-width: 100%;
+  z-index: 1;
+}
+.airbnb-1-icon {
+  height: 48px;
+  width: 48px;
+  position: relative;
+  object-fit: contain;
+}
+.airbnb-inc-usa {
+  align-self: stretch;
+  height: 28px;
+  position: relative;
+  line-height: 28px;
+  font-weight: 500;
+  display: inline-block;
+}
+.company4 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-xs);
+  font-size: var(--body-large-500-size);
+  color: var(--main);
+}
+.job9 {
+  flex: 1;
+  border-radius: var(--br-5xs);
+  background-color: var(--gray-00);
+  box-shadow: 0px 2px 18px rgba(24, 25, 28, 0.03);
+  border: 1px solid var(--gray-100);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-5xl) var(--padding-6xl) var(--padding-5xl)
+    var(--padding-4xl);
+  gap: var(--gap-xl);
+  min-width: 282px;
+  max-width: 100%;
+  z-index: 1;
+  color: var(--gray-900);
+}
+.job-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--gap-base);
+  max-width: 100%;
+}
+.full-time6 {
+  height: 12px;
+  width: 64px;
+  position: relative;
+  line-height: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-block;
+}
+.employers-logo-icon3 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: none;
+}
+.employers-logo4 {
+  height: 48px;
+  width: 48px;
+  border-radius: var(--br-9xs);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xs);
+  box-sizing: border-box;
+  background-image: url("/public/employers-logo1@3x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.instagram-usa {
+  align-self: stretch;
+  height: 24px;
+  position: relative;
+  line-height: 24px;
+  font-weight: 500;
+  display: inline-block;
+}
+.logo-1-icon2 {
+  height: 48px;
+  width: 48px;
+  position: relative;
+  object-fit: contain;
+  min-height: 48px;
+}
+.info7 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-9xs);
+  min-width: 187px;
+}
+.quote-marker {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--gap-xl);
+  max-width: 100%;
+}
+.more-jobs {
+  height: 25px;
+  width: 97px;
+  position: relative;
+  font-size: var(--text-xl-medium-size);
+  font-weight: 600;
+  font-family: var(--font-outfit);
+  color: var(--color-gainsboro-200);
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+.more-jobs-wrapper {
+  cursor: pointer;
+  border: none;
+  padding: var(--padding-xs) var(--padding-25xl) var(--padding-smi)
+    var(--padding-30xl);
+  background-color: transparent;
+  border-radius: var(--br-10xs);
+  background: linear-gradient(180deg, #2a2b3c, #696c96);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  z-index: 1;
+}
+.text-block {
+  width: 886px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-27xl);
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--text-xl-medium-size);
+  color: var(--main);
+}
+.featured-jobs {
+  align-self: stretch;
+  background: linear-gradient(180deg, #a5a7c0, #f0f0f5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-29xl) var(--padding-29xl) var(--padding-45xl);
+  box-sizing: border-box;
+  gap: var(--gap-56xl);
+  max-width: 100%;
+  z-index: 1;
+  text-align: center;
+  font-size: var(--font-size-21xl);
+  color: var(--color-gray-100);
+  font-family: var(--font-outfit);
+}
+
+@media screen and (max-width: 1050px) {
+  .featured-jobs {
+    gap: var(--gap-18xl);
+    padding: var(--padding-12xl) var(--padding-5xl) var(--padding-23xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 750px) {
+  .featured-jobs1 {
+    font-size: var(--font-size-13xl);
+  }
+
+  .featured-jobs {
+    gap: var(--gap-lgi);
+    padding-top: var(--padding-xl);
+    padding-bottom: var(--padding-8xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .featured-jobs1 {
+    font-size: var(--display-xs-semibold-size);
+  }
+
+  .technical-support-specialist {
+    font-size: var(--body-medium-400-size);
+    line-height: 22px;
+  }
+
+  .company3 {
+    flex-wrap: wrap;
+  }
+
+  .company4 {
+    flex-wrap: wrap;
+  }
+
+  .text-block {
+    gap: var(--gap-4xl);
+  }
+}
