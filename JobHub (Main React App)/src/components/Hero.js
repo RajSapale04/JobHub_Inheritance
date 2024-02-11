@@ -1,5 +1,6 @@
 import { useState } from "react";
 import  "./LastNameInput.css";
+import axios from "axios";
 import "./Hero.css";
 import { useAuthContext } from "../hooks/useAuthContext"
 import { useNavigate } from "react-router-dom";
@@ -15,6 +16,43 @@ const Hero = () => {
     registeredCountry:"",
     
   })
+    const [error, setError] = useState(null)
+  const [status, setStatus] = useState(null)
+    const handleSubmit= async ()=>{
+    setError(null)
+    setStatus(null)
+    try {
+      const response = await axios.post("http://localhost:4000/company",formdata,{
+      headers:{
+        Authorization: `Bearer ${user.token}`
+      }
+     
+  
+  
+    })
+        
+        const json = response.data
+        if (response.status >= 200 && response.status<300){
+          setStatus("user profile created")
+          navigate(`/company-profile`)
+        
+        
+      }
+      else{
+        setError(json.error||"Some unexpected Error")
+      }
+
+      
+    } catch (error) {
+      setError(error.response.data.error)
+
+
+      
+    }
+    
+
+
+  }
 
   return (
     <form className="hero">
@@ -112,8 +150,10 @@ const Hero = () => {
         </div>
       </div>
       <div className="register">
-        <div className="register1">Register</div>
+        <div className="register1" onClick={handleSubmit}>Register</div>
       </div>
+    {status && <div>{status}</div>}
+    {error && <div>{error}</div>}
     </form>
   );
 };

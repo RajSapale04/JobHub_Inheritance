@@ -1,15 +1,22 @@
 const Job = require('../models/postJob')
 const UserProfile = require('../models/UserSignUp')
+const Company = require('../models/companySignUp')
 
 const postJob=async (req,res)=>{
     const company_id = req.user._id
+
     try {
-        const job = await Job.create({...req.body,company_id})
+        const jobs = await Company.findOne({company_id})
+
+        const companyName = jobs.companyName;
+        const job = await Job.create({...req.body,companyName,company_id})
+
         res.status(200).json(job)
         
     } catch (error) {
         res.status(400).json({error: error.message})       
     }
+
     
 }
 
@@ -89,6 +96,16 @@ const acceptUser= async(req,res)=>{
 
 
 }
+const getJobs =async(req,res)=>{
+    const company_id=req.user._id
+    const job = await Job.find({company_id})
+    if(!job){
+        return res.status(404).json({
+            error:"Company not found"
+        })
+    }
+    res.status(200).json(job)
+}
 
 
 module.exports={
@@ -98,5 +115,6 @@ module.exports={
     getUsers,
     getUser,
     removeUser,
-    acceptUser
+    acceptUser,
+    getJobs
 }

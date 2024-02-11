@@ -20,8 +20,7 @@ const Login = ({
     const handleSubmit = async (e)=>{
     e.preventDefault()
     await login(email, password , user)
-    navigate('/user-profile')
-    
+
 
 
   }
@@ -77,8 +76,8 @@ const Login = ({
             </div>
           </div>
 
-          <button type="submit" className="main-button">
-            <div className="sign-in">Login</div>
+          <button disabled={isloading}  type="submit" className="main-button">
+            <div   className="sign-in">Login</div>
           </button>
           {error && <div>{error}</div> }
         </form>

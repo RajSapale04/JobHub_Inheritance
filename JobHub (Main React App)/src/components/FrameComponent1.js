@@ -1,7 +1,13 @@
 import { useState } from "react";
 import "./FrameComponent1.css";
+import { useNavigate } from "react-router-dom";
 
 const FrameComponent1 = () => {
+  const navigate = useNavigate()
+  const handleClick=()=>{
+    navigate("/post-job")
+  }
+
   const [navLinkValue, setNavLinkValue] = useState("");
   const [navLink1Value, setNavLink1Value] = useState("");
   const [navLink2Value, setNavLink2Value] = useState("");
@@ -14,37 +20,13 @@ const FrameComponent1 = () => {
             <div className="nav-link">
               <div className="home1">Home</div>
             </div>
-            <input
-              className="nav-link1"
-              placeholder="Find Job"
-              type="text"
-              value={navLinkValue}
-              onChange={(event) => setNavLinkValue(event.target.value)}
-            />
-            <input
-              className="nav-link2"
-              placeholder="Find Employers"
-              type="text"
-              value={navLink1Value}
-              onChange={(event) => setNavLink1Value(event.target.value)}
-            />
+
+
             <div className="nav-link3">
               <div className="home2">Dashboard</div>
             </div>
-            <input
-              className="nav-link4"
-              placeholder="Job Alerts"
-              type="text"
-              value={navLink2Value}
-              onChange={(event) => setNavLink2Value(event.target.value)}
-            />
-            <input
-              className="nav-link5"
-              placeholder="Customer Supports"
-              type="text"
-              value={navLink3Value}
-              onChange={(event) => setNavLink3Value(event.target.value)}
-            />
+
+
           </div>
           <div className="logo-and-nav">
             <div className="profile-pic">
@@ -123,7 +105,7 @@ const FrameComponent1 = () => {
         alt=""
         src="/logo-1@2x.png"
       />
-      <button className="edit-button1">
+      <button className="edit-button1" onClick={handleClick}>
         <div className="edit-button-child" />
         <div className="post-a-job3">Post A Job</div>
       </button>

@@ -50,6 +50,9 @@ const companySchema = new mongoose.Schema({
   company_id:{
     type:String,
     required:true
+  },
+  jobs:{
+    type:Number
   }
 },{timestamps: true});
 

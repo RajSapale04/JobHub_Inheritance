@@ -9,6 +9,7 @@ import EmployerProfile from "./pages/EmployerProfile";
 import UserProfile from "./pages/UserProfile";
 import JobDetail from "./pages/JobDetail";
 import JobList from "./pages/JobList";
+import Job from "./pages/Job";
 import SignUpPage from "./pages/SignUpPage";
 import LoginPage from "./pages/LoginPage";
 import Employer from "./pages/Employer";
@@ -92,14 +93,15 @@ function App() {
     <Routes>
       <Route path="/" element={<MainPage />} />
       <Route path="/user-profile" element={<UserProfile />} />
-      <Route path="/job-detail" element={<JobDetail />} />
+      <Route path="/post-job" element={<Job />} />
+      <Route path="/job-detail/:id" element={<JobDetail />} />
       <Route path="/job-list" element={<JobList />} />
       <Route path="/:user/signup" element={<SignUpPage />} />
       <Route path="/:user/login" element={<LoginPage />} />
       <Route path="/company" element={<Employer />} />
       <Route path="/user" element={<JobSeeker />} />
       <Route path="/welcome" element={<Welcome />} />
-      <Route path="/employer-profile" element={<EmployerProfile />} />
+      <Route path="/company-profile" element={<EmployerProfile />} />
     </Routes>
   );
 }

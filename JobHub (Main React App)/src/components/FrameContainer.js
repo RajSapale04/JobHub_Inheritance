@@ -2,7 +2,27 @@ import { useState } from "react";
 import Job2 from "./Job2";
 import "./FrameContainer.css";
 
-const FrameContainer = () => {
+const FrameContainer = ({data}) => {
+  console.log("Data:", data);
+
+  const Job= data.map((e)=>(
+    <Job2 
+    id={e._id}
+    key={e._id}
+    techicalSupportSpecialist={e.jobTitle}
+    employersLogo="/employers-logo.svg"
+    mapPin="/mappin.svg"
+    bookmarkSimple="/bookmarksimple-11.svg"
+    propBackground="unset"
+    propBackgroundColor="#fff"
+    minSalary={e.minSalary}
+    maxSalary={e.maxSalary}
+    companyName={e.companyName}
+    city={e.city}
+    country={e.country}
+    partTime={e.jobType}
+    />
+  ));
   const [searchByJobValue, setSearchByJobValue] = useState("");
   const [cityStateOrValue, setCityStateOrValue] = useState("");
   return (
@@ -41,7 +61,8 @@ const FrameContainer = () => {
         </button>
       </form>
       <div className="google-inc2">
-        <Job2
+        {data && Job}
+        {/* <Job2
           techicalSupportSpecialist="Techical Support Specialist"
           partTime="Part-time"
           employersLogo="/employers-logo.svg"
@@ -174,7 +195,7 @@ const FrameContainer = () => {
           bookmarkSimple="/bookmarksimple-11.svg"
           propBackground="unset"
           propBackgroundColor="#fff"
-        />
+        /> */}
       </div>
       <div className="pagination">
         <div className="icon-button1">

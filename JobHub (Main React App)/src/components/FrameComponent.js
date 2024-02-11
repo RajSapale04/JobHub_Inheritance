@@ -1,12 +1,12 @@
 import "./FrameComponent.css";
 
-const FrameComponent = () => {
+const FrameComponent = ({companyName}) => {
   return (
     <div className="type2">
       <div className="map-pin-instance">
         <div className="intro">
           <div className="applicants-number" />
-          <h1 className="hello-amazon">Hello, Amazon</h1>
+          <h1 className="hello-amazon">Hello, {companyName}</h1>
           <div className="here-is-your1">
             Here is your daily activities and job alerts
           </div>

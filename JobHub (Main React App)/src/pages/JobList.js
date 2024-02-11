@@ -1,36 +1,77 @@
 import Navigation2 from "../components/Navigation2";
 import FrameContainer from "../components/FrameContainer";
 import "./JobList.css";
+import axios from "axios";
+import { useState,useEffect } from "react";
+import { useAuthContext } from "../hooks/useAuthContext";
+import { useNavigate } from "react-router-dom";
+
 
 const JobList = () => {
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
+  const{user}= useAuthContext()
+
+    useEffect(()=>{
+    const fetchData=async()=>{
+
+      try {
+        const response = await axios.get("http://localhost:4000/user/jobs",{
+        headers:{
+            Authorization: `Bearer ${user.token}`
+          }
+        });
+        
+        const json = response.data;
+        if (response.status >= 200 && response.status<300){
+        setData(json);
+        console.log(response);
+        
+       
+
+
+        }
+        else{
+          setError(json.error||"some unexpected Error");
+        }
+
+        
+      } catch (error) {
+        navigate('/user/login')
+        setError(error.response.data.error);
+        
+      } finally {
+        setIsLoading(false);
+      }
+
+    }
+    if(user){
+      fetchData()
+      
+      console.log(data)
+      
+    }
+
+
+
+
+
+  },[user])
+
+
   return (
     <div className="job-list">
       <Navigation2 />
       <section className="breadcrumb-wrapper">
         <div className="breadcrumb1">
           <h3 className="label10">Find Job</h3>
-          <div className="process1">
-            <div className="label11">Home</div>
-            <div className="support-section">/</div>
-            <div className="label12">Label</div>
-            <div className="div7">/</div>
-            <div className="label12">Label</div>
-            <div className="div7">/</div>
-            <div className="label12">Label</div>
-            <div className="div7">/</div>
-            <div className="label12">Label</div>
-            <div className="div7">/</div>
-            <div className="label12">Label</div>
-            <div className="div7">/</div>
-            <div className="label12">Label</div>
-            <div className="div7">/</div>
-            <div className="label12">Label</div>
-            <div className="div7">/</div>
-            <div className="label19">Find job</div>
-          </div>
+  
+          
         </div>
       </section>
-      <FrameContainer />
+      {data &&<FrameContainer data={data}/>}
       <footer className="footer">
         <div className="main-frame">
           <div className="jendo">

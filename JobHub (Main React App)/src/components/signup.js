@@ -16,7 +16,6 @@ const Signup = ({
   const handleSubmit = async (e)=>{
     e.preventDefault()
     await signup(email, password , user)
-    navigate(`/${user}`)
 
   }
 

@@ -65,6 +65,7 @@ const unapplyJob = async (req,res)=>{
 }
 const getJobs =async(req,res)=>{
     const job = await Job.find()
+    console.log(job)
     if(!job){
         return res.status(404).json({
             error:"Company not found"

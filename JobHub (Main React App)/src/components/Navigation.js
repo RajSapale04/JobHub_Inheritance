@@ -1,11 +1,13 @@
 import { useState } from "react";
 import "./Navigation.css";
+import { useNavigate } from "react-router-dom";
 
 const Navigation = () => {
-  const [navLinkValue, setNavLinkValue] = useState("");
-  const [navLink1Value, setNavLink1Value] = useState("");
-  const [navLink2Value, setNavLink2Value] = useState("");
-  const [navLink3Value, setNavLink3Value] = useState("");
+  const navigate= useNavigate();
+  const handleClick=()=>{
+    navigate("/job-list")
+  }
+
   return (
     <section className="navigation2">
       <header className="navigation3">
@@ -14,37 +16,11 @@ const Navigation = () => {
             <div className="nav-link7">
               <div className="home3">Home</div>
             </div>
-            <input
-              className="nav-link8"
-              placeholder="Find Job"
-              type="text"
-              value={navLinkValue}
-              onChange={(event) => setNavLinkValue(event.target.value)}
-            />
-            <input
-              className="nav-link9"
-              placeholder="Find Employers"
-              type="text"
-              value={navLink1Value}
-              onChange={(event) => setNavLink1Value(event.target.value)}
-            />
+
+
             <div className="nav-link10">
               <div className="home4">Dashboard</div>
             </div>
-            <input
-              className="nav-link11"
-              placeholder="Job Alerts"
-              type="text"
-              value={navLink2Value}
-              onChange={(event) => setNavLink2Value(event.target.value)}
-            />
-            <input
-              className="nav-link12"
-              placeholder="Customer Supports"
-              type="text"
-              value={navLink3Value}
-              onChange={(event) => setNavLink3Value(event.target.value)}
-            />
           </div>
           <div className="right-sidebar">
             <div className="spacer">
@@ -102,7 +78,8 @@ const Navigation = () => {
                   />
                 </div>
                 <div className="search-icon" />
-                <div className="favorite-jobs-frame">
+                <div className="favorite-jobs-frame"
+                onClick={handleClick}>
                   <img
                     className="fisearch-icon1"
                     loading="eager"

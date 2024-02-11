@@ -4,6 +4,7 @@ const UserProfile = require('../models/UserSignUp')
 const Job = require('../models/postJob')
 const mongoose = require('mongoose')
 
+
 const createToken=(_id)=>{
     return jwt.sign({_id},process.env.SECRET,{expiresIn:'1d'})
 }
@@ -53,6 +54,7 @@ const createUser = async (req,res)=>{
     } catch(error){
         res.status(400).json({error: error.message})
 
+        
     }  
 }
 const getUser = async(req,res)=>{
