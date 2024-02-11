@@ -1,7 +1,9 @@
 import { useMemo } from "react";
 import "./Job2.css";
+import { useNavigate } from "react-router-dom";
 
 const Job2 = ({
+  id,
   techicalSupportSpecialist,
   partTime,
   employersLogo,
@@ -9,7 +11,13 @@ const Job2 = ({
   bookmarkSimple,
   propBackground,
   propBackgroundColor,
+  minSalary,
+  maxSalary,
+  companyName,
+  city,
+  country
 }) => {
+  const navigate=useNavigate()
   const jobStyle = useMemo(() => {
     return {
       background: propBackground,
@@ -17,8 +25,12 @@ const Job2 = ({
     };
   }, [propBackground, propBackgroundColor]);
 
+  const handleClick=()=>{
+    navigate(`/job-detail/${id}`)
+  }
+
   return (
-    <div className="job6" style={jobStyle}>
+    <div className="job6" style={jobStyle} onClick={handleClick}>
       <div className="heading3">
         <div className="techical-support-specialist">
           {techicalSupportSpecialist}
@@ -27,7 +39,7 @@ const Job2 = ({
           <div className="type7">
             <div className="part-time">{partTime}</div>
           </div>
-          <div className="salary-20000-3">Salary: $20,000 - $25,000</div>
+          <div className="salary-20000-3">Salary: {minSalary} - {maxSalary}</div>
         </div>
       </div>
       <div className="company1">
@@ -40,10 +52,10 @@ const Job2 = ({
           />
         </div>
         <div className="info2">
-          <div className="google-inc1">Google Inc.</div>
+          <div className="google-inc1">{companyName}</div>
           <div className="loaction1">
             <img className="mappin-icon6" alt="" src={mapPin} />
-            <div className="dhaka-bangladesh7">Dhaka, Bangladesh</div>
+            <div className="dhaka-bangladesh7">{city}, {country}</div>
           </div>
         </div>
         <img

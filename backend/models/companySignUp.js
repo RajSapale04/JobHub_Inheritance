@@ -40,10 +40,7 @@ const companySchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  designation: {
-    type: String,
-    required: true
-  },
+
   companyVerification: {
     filename: String,
     contentType: String,
@@ -53,6 +50,9 @@ const companySchema = new mongoose.Schema({
   company_id:{
     type:String,
     required:true
+  },
+  jobs:{
+    type:Number
   }
 },{timestamps: true});
 

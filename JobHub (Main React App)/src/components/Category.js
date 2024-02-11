@@ -11,7 +11,7 @@ const Category = ({
   const category5Style = useMemo(() => {
     return {
       left: propLeft,
-      
+      padding: propPadding,
       top: propTop,
     };
   }, [propLeft, propPadding, propTop]);

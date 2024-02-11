@@ -6,7 +6,7 @@ const Welcome = () => {
     <div className="welcome">
       <div className="background-group">
         <img className="background-icon2" alt="" src="/background.svg" />
-        <div className="sticky"><header className="navbar2">
+        <header className="navbar2">
           <b className="jobhub5">JobHub</b>
           {/* <div className="already-registered4">Already Registered?</div>
           <div className="navbar-inner" /> */}
@@ -18,7 +18,6 @@ const Welcome = () => {
             </button>
           </div> */}
         </header>
-        </div>
         <Hero2 />
       </div>
     </div>

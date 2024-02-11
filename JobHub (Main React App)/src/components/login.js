@@ -3,7 +3,8 @@ import "./LeftSide8Column.css";
 import axios from 'axios';
 import { Link } from "react-router-dom";
 import { useLogin } from "../hooks/useLogin";
-import { Redirect } from "react-router-dom";
+
+import { useNavigate } from "react-router-dom";
 
 
 const Login = ({
@@ -11,7 +12,7 @@ const Login = ({
   user
 }) => {
 
-  
+  const navigate = useNavigate()
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
   const {login,error,isloading}= useLogin()
@@ -19,7 +20,7 @@ const Login = ({
     const handleSubmit = async (e)=>{
     e.preventDefault()
     await login(email, password , user)
-    
+
 
 
   }
@@ -75,8 +76,8 @@ const Login = ({
             </div>
           </div>
 
-          <button type="submit" className="main-button">
-            <div className="sign-in">Login</div>
+          <button disabled={isloading}  type="submit" className="main-button">
+            <div   className="sign-in">Login</div>
           </button>
           {error && <div>{error}</div> }
         </form>

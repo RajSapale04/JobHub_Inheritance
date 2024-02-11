@@ -13,74 +13,72 @@ const MainPage = () => {
         <div className="background-child" />
         <JobCard />
         <section className="categories">
-          <div className="cat">
-            <Category1
-              marketingSales={`Marketing & Sales`}
-              jobsAvailable="1500+ Jobs Available"
-              propLeft="515px"
-              propPadding="var(--padding-7xs) var(--padding-base) var(--padding-xs) var(--padding-3xs)"
-              propTop="50px"
+          <Category1
+            marketingSales={`Marketing & Sales`}
+            jobsAvailable="1500+ Jobs Available"
+            propLeft="515px"
+            propPadding="var(--padding-7xs) var(--padding-base) var(--padding-xs) var(--padding-3xs)"
+            propTop="50px"
+          />
+          <Category1
+            marketingSales="App Development"
+            jobsAvailable="1800+ Jobs Available"
+            propLeft="839px"
+            propPadding="var(--padding-7xs) var(--padding-sm) var(--padding-xs) var(--padding-3xs)"
+            propTop="50px"
+          />
+          <Category1
+            marketingSales="Finance"
+            jobsAvailable="900+ Jobs Available"
+            propLeft="1163px"
+            propPadding="var(--padding-7xs) var(--padding-24xl) var(--padding-xs) var(--padding-3xs)"
+            propTop="50px"
+          />
+          <Category1
+            marketingSales="Graphics Design"
+            jobsAvailable="2300+ Jobs Available"
+            propLeft="515px"
+            propPadding="var(--padding-7xs) var(--padding-9xl) var(--padding-xs) var(--padding-3xs)"
+            propTop="183px"
+          />
+          <Category
+            legalServices="Legal Services"
+            jobsAvailable="2500+ Jobs Available"
+            propLeft="839px"
+            propPadding="var(--padding-7xs) var(--padding-17xl) var(--padding-xs) var(--padding-3xs)"
+            propTop="183px"
+          />
+          <Category
+            legalServices="Support Engineer"
+            jobsAvailable="500+ Jobs Available"
+            propLeft="1163px"
+            propPadding="var(--padding-7xs) var(--padding-lgi) var(--padding-xs) var(--padding-3xs)"
+            propTop="183px"
+          />
+          <Category1
+            marketingSales="Teacher"
+            jobsAvailable="300+ Jobs Available"
+            propLeft="515px"
+            propPadding="var(--padding-7xs) var(--padding-25xl) var(--padding-xs) var(--padding-3xs)"
+            propTop="316px"
+          />
+          <Category
+            legalServices="Web Development"
+            jobsAvailable="2200+ Jobs Available"
+            propLeft="839px"
+            propPadding="var(--padding-7xs) var(--padding-2xs) var(--padding-xs) var(--padding-3xs)"
+            propTop="316px"
+          />
+          <div className="category9">
+            <div className="category9-child" />
+            <img
+              className="businessman-1-icon"
+              alt=""
+              src="/businessman-1@2x.png"
             />
-            <Category1
-              marketingSales="App Development"
-              jobsAvailable="1800+ Jobs Available"
-              propLeft="839px"
-              propPadding="var(--padding-7xs) var(--padding-sm) var(--padding-xs) var(--padding-3xs)"
-              propTop="50px"
-            />
-            <Category1
-              marketingSales="Finance"
-              jobsAvailable="900+ Jobs Available"
-              propLeft="1163px"
-              propPadding="var(--padding-7xs) var(--padding-24xl) var(--padding-xs) var(--padding-3xs)"
-              propTop="50px"
-            />
-            <Category1
-              marketingSales="Graphics Design"
-              jobsAvailable="2300+ Jobs Available"
-              propLeft="515px"
-              propPadding="var(--padding-7xs) var(--padding-9xl) var(--padding-xs) var(--padding-3xs)"
-              propTop="183px"
-            />
-            <Category
-              legalServices="Legal Services"
-              jobsAvailable="2500+ Jobs Available"
-              propLeft="839px"
-              propPadding="var(--padding-7xs) var(--padding-17xl) var(--padding-xs) var(--padding-3xs)"
-              propTop="183px"
-            />
-            <Category
-              legalServices="Support Engineer"
-              jobsAvailable="500+ Jobs Available"
-              propLeft="1163px"
-              propPadding="var(--padding-7xs) var(--padding-lgi) var(--padding-xs) var(--padding-3xs)"
-              propTop="183px"
-            />
-            <Category1
-              marketingSales="Teacher"
-              jobsAvailable="300+ Jobs Available"
-              propLeft="515px"
-              propPadding="var(--padding-7xs) var(--padding-25xl) var(--padding-xs) var(--padding-3xs)"
-              propTop="316px"
-            />
-            <Category
-              legalServices="Web Development"
-              jobsAvailable="2200+ Jobs Available"
-              propLeft="839px"
-              propPadding="var(--padding-7xs) var(--padding-2xs) var(--padding-xs) var(--padding-3xs)"
-              propTop="316px"
-            />
-            <div className="category9">
-              <div className="category9-child" />
-              <img
-                className="businessman-1-icon"
-                alt=""
-                src="/businessman-1@2x.png"
-              />
-              <div className="security-500-jobs-container">
-                <p className="security">Security</p>
-                <p className="jobs-available">500+ Jobs Available</p>
-              </div>
+            <div className="security-500-jobs-container">
+              <p className="security">Security</p>
+              <p className="jobs-available">500+ Jobs Available</p>
             </div>
           </div>
         </section>
@@ -127,21 +125,18 @@ const MainPage = () => {
             <div className="learn-more-button">
               <div className="circle-wavy-check-frame-parent">
                 <div className="circle-wavy-check-frame">
-                  <img
-                    className="circle-wavy-check-duotone-1-icon"
-                    alt=""
-                    src="/circlewavycheckduotone-1.svg"
+                  <input
+                    className="circle-wavy-check-duotone-1"
+                    type="checkbox"
                   />
-                  <img
-                    className="circle-wavy-check-duotone-1-icon"
-                    alt=""
-                    src="/circlewavycheckduotone-1.svg"
+                  <input
+                    className="circle-wavy-check-duotone-1"
+                    type="checkbox"
                   />
-                  <img
-                    className="circle-wavy-check-duotone-1-icon"
-                    alt=""
-                    src="/circlewavycheckduotone-1.svg"
-                  />{" "}
+                  <input
+                    className="circle-wavy-check-duotone-1"
+                    type="checkbox"
+                  />
                 </div>
                 <div className="dashboard-link">
                   <div className="top-companies-and">

@@ -6,11 +6,13 @@ const {
     getUsers,
     getUser,
     removeUser,
-    acceptUser
+    acceptUser,
+    getJobs
 }=require('../controllers/jobscontroller')
 
 const router=express.Router()
-router.post('/:id',postJob)
+router.post('/',postJob)
+router.get('/',getJobs)
 router.delete('/:id',deleteJob)
 router.patch('/:id',updateJob)
 router.get('/users/:id',getUsers)

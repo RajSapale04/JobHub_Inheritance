@@ -15,16 +15,6 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
     unique: true,
-    validate: {
-        validator: function (value) {
-          return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-        },
-        message: 'Invalid email address'
-      }
-  },
-  password: {
-    type: String,
-    minlenght: 6
   },
   mobileNumber: {
     type: String,

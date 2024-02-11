@@ -10,9 +10,7 @@ const JobCard = () => {
       <div className="company-logo">
         <div className="navbar3">
           <header className="rectangle-header" />
-          <Link className="job-link1" to="/">
-            <h1 className="jobhub7">JobHub</h1>
-          </Link>
+          <h1 className="jobhub7">JobHub</h1>
           <div className="salary-info">
             <div className="features-wrapper">
               <div className="features">Features</div>
@@ -27,10 +25,12 @@ const JobCard = () => {
               <div className="about2">About</div>
             </div>
             <button className="login-wrapper">
-              <Link to="/welcome">
-                <div className="login">Login</div>
+              <Link to={'/welcome'}>
+
+              <div className="login">Login</div>
               </Link>
             </button>
+
           </div>
         </div>
         <div className="c-v-resume">

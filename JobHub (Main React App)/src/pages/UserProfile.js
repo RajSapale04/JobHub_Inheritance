@@ -1,10 +1,78 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Navigation from "../components/Navigation";
 import StatusActionFrame from "../components/StatusActionFrame";
 import CopyRight from "../components/CopyRight";
 import "./UserProfile.css";
+import { useAuthContext } from "../hooks/useAuthContext"
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useLogout } from '../hooks/useLogout'
 
 const UserProfile = () => {
+  const { logout } = useLogout()
+  const navigate=useNavigate();
+  const [data, setData] = useState(null);
+  const {user} = useAuthContext();
+  const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleClick = () => {
+    logout();
+    navigate('/')
+  }
+
+
+
+  useEffect(()=>{
+    const fetchData=async()=>{
+
+      try {
+        const response = await axios.get("http://localhost:4000/user",{
+        headers:{
+            Authorization: `Bearer ${user.token}`
+          }
+        });
+        
+        const json = response.data;
+        if (response.status >= 200 && response.status<300){
+        setData(json[0]);
+        console.log(json[0]);
+        
+       
+
+
+        }
+        else if(json.error==="no such user found"){
+          navigate('/user');
+        }
+        else{
+          setError(json.error||"some unexpected Error");
+        }
+
+        
+      } catch (error) {
+        navigate('/user/login')
+        setError(error.response.data.error);
+        
+      } finally {
+        setIsLoading(false);
+      }
+
+    }
+    if(user){
+      fetchData()
+      
+      console.log(data)
+      
+    }
+
+
+
+
+
+  },[user])
+
+  
   const [overviewTextValue, setOverviewTextValue] = useState("");
   const [appliedJobsTextValue, setAppliedJobsTextValue] = useState("");
   const [jobAlertsTextValue, setJobAlertsTextValue] = useState("");
@@ -19,7 +87,13 @@ const UserProfile = () => {
               <div className="recently-applied-frame">
                 <div className="recently-applied-frame-child" />
                 <img className="stack-icon1" alt="" src="/stack.svg" />
-                <h3 className="favorite-jobs">Overview</h3>
+                <input
+                  className="overview1"
+                  placeholder="Overview"
+                  type="text"
+                  value={overviewTextValue}
+                  onChange={(event) => setOverviewTextValue(event.target.value)}
+                />
               </div>
               <div className="recently-applied-frame1">
                 <div className="recently-applied-frame-item" />
@@ -28,9 +102,17 @@ const UserProfile = () => {
                   alt=""
                   src="/briefcase-1-1.svg"
                 />
-                <h3 className="favorite-jobs">Applied Jobs</h3>
+                <input
+                  className="applied-jobs"
+                  placeholder="Applied Jobs"
+                  type="text"
+                  value={appliedJobsTextValue}
+                  onChange={(event) =>
+                    setAppliedJobsTextValue(event.target.value)
+                  }
+                />
               </div>
-              <div className="recently-applied-frame3">
+              <div className="recently-applied-frame2">
                 <div className="recently-applied-frame-item" />
                 <img
                   className="stack-icon1"
@@ -43,8 +125,15 @@ const UserProfile = () => {
               <div className="recently-applied-frame3">
                 <div className="recently-applied-frame-item" />
                 <img className="stack-icon1" alt="" src="/bellringing-1.svg" />
-                <h3 className="favorite-jobs">Job Alerts</h3>
-                
+                <input
+                  className="job-alerts"
+                  placeholder="Job Alerts"
+                  type="text"
+                  value={jobAlertsTextValue}
+                  onChange={(event) =>
+                    setJobAlertsTextValue(event.target.value)
+                  }
+                />
               </div>
               <div className="recently-applied-frame3">
                 <div className="recently-applied-frame-item" />
@@ -53,69 +142,25 @@ const UserProfile = () => {
                   alt=""
                   src="/setting-fill@2x.png"
                 />
-                <h3 className="favorite-jobs">Settings</h3>
+                <input
+                  className="settings1"
+                  placeholder="Settings"
+                  type="text"
+                  value={settingsTextValue}
+                  onChange={(event) => setSettingsTextValue(event.target.value)}
+                />
               </div>
             </div>
           </div>
-          <StatusActionFrame />
+          {data&& <StatusActionFrame {...data}/>}
         </div>
         <div className="main-navigation">
-          <div className="top-bar">
+          <div className="top-bar" onClick={handleClick}  >
             <div className="top-bar-child" />
             <div className="logo-container" />
             <h3 className="log-out1">Log Out</h3>
           </div>
-          <div className="log-out-button">
-            <div className="job31">
-              <div className="frame-child" />
-              <div className="job3-item" />
-              <div className="rectangle-shape">
-                <div className="salary-text">
-                  <img
-                    className="microsoft-1-icon1"
-                    alt=""
-                    src="/microsoft-1@2x.png"
-                  />
-                  <div className="job-card-frame">
-                    <div className="front-end-developer-parent">
-                      <h3 className="front-end-developer1">
-                        Front End Developer
-                      </h3>
-                      <div className="type1">
-                        <div className="full-time1">Full-Time</div>
-                      </div>
-                    </div>
-                    <div className="frame-group">
-                      <div className="mappin-group">
-                        <img
-                          className="mappin-icon1"
-                          alt=""
-                          src="/mappin.svg"
-                        />
-                        <div className="dhaka-bangladesh1">
-                          Dhaka, Bangladesh
-                        </div>
-                      </div>
-                      <div className="salary-20000-">
-                        Salary: $20,000 - $25,000
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="employer">
-                  <div className="feb-2-2023">Feb 2, 2023 20:45</div>
-                </div>
-              </div>
-              <div className="active-status">
-                <div className="active-parent">
-                  <div className="active">Active</div>
-                  <button className="view-button1">
-                    <div className="view-details">View Details</div>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+  
         </div>
       </section>
       <CopyRight

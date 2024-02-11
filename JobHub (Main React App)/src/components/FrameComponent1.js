@@ -1,7 +1,13 @@
 import { useState } from "react";
 import "./FrameComponent1.css";
+import { useNavigate } from "react-router-dom";
 
 const FrameComponent1 = () => {
+  const navigate = useNavigate()
+  const handleClick=()=>{
+    navigate("/post-job")
+  }
+
   const [navLinkValue, setNavLinkValue] = useState("");
   const [navLink1Value, setNavLink1Value] = useState("");
   const [navLink2Value, setNavLink2Value] = useState("");
@@ -10,25 +16,18 @@ const FrameComponent1 = () => {
     <section className="container-frame">
       <header className="navigation">
         <div className="navigation-bar">
-        <div className="menu-button">
-            <div className="nav-link7">
-              <div className="home3">Home</div>
+          <div className="link-frame">
+            <div className="nav-link">
+              <div className="home1">Home</div>
             </div>
-            <div className="nav-link7">
-              <div className="home3">Find Jobs</div>
+
+
+            <div className="nav-link3">
+              <div className="home2">Dashboard</div>
             </div>
-            <div className="nav-link7">
-              <div className="home3">Find Employers</div>
-            </div>
-            <div className="nav-link10">
-              <div className="home4">Dashboard</div>
-            </div>
-            <div className="nav-link7">
-              <div className="home3">Job Alerts</div>
-            </div>
-            <div className="nav-link7">
-              <div className="home3">Customer Support</div>
-            </div></div>
+
+
+          </div>
           <div className="logo-and-nav">
             <div className="profile-pic">
               <img
@@ -106,7 +105,7 @@ const FrameComponent1 = () => {
         alt=""
         src="/logo-1@2x.png"
       />
-      <button className="edit-button1">
+      <button className="edit-button1" onClick={handleClick}>
         <div className="edit-button-child" />
         <div className="post-a-job3">Post A Job</div>
       </button>

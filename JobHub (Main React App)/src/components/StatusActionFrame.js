@@ -1,13 +1,14 @@
 import Job from "./Job";
 import "./StatusActionFrame.css";
 
-const StatusActionFrame = () => {
+const StatusActionFrame = ({firstName,lastName,jobs,currentCity}
+) => {
   return (
     <div className="status-action-frame5">
       <div className="search-button">
         <div className="intro1">
           <div className="search-bar1" />
-          <h1 className="hello-abdulqadir-amin">Hello, Abdulqadir Amin</h1>
+          <h1 className="hello-abdulqadir-amin">Hello, {firstName} {lastName}</h1>
           <div className="here-is-your2">
             Here is your daily activities and job alerts
           </div>
@@ -16,7 +17,7 @@ const StatusActionFrame = () => {
           <div className="box31">
             <div className="box3-item" />
             <div className="applied-jobs1">
-              <p className="p5">589</p>
+              <p className="p5">{jobs.length}</p>
               <p className="applied-jobs2">Applied Jobs</p>
             </div>
             <button className="frame-button">
@@ -28,7 +29,7 @@ const StatusActionFrame = () => {
               />
             </button>
           </div>
-          <div className="box21">
+          {/* <div className="box21">
             <div className="box2-item" />
             <div className="favorite-jobs2">
               <p className="p5">234</p>
@@ -42,7 +43,7 @@ const StatusActionFrame = () => {
                 src="/bookmarksimple-1.svg"
               />
             </div>
-          </div>
+          </div> */}
           <div className="box11">
             <div className="box1-item" />
             <div className="job-alerts1">

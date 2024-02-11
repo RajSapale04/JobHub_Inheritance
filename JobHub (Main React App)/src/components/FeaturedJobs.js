@@ -1,6 +1,5 @@
 import Job3 from "./Job3";
 import "./FeaturedJobs.css";
-import { Link } from "react-router-dom";
 
 const FeaturedJobs = () => {
   return (
@@ -161,10 +160,9 @@ const FeaturedJobs = () => {
             propOverflow="unset"
           />
         </div>
-        <Link className="job-link" to="/job-list">
         <button className="more-jobs-wrapper">
           <div className="more-jobs">More Jobs</div>
-        </button></Link>
+        </button>
       </div>
     </section>
   );

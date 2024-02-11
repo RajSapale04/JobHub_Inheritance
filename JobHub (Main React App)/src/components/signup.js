@@ -16,7 +16,6 @@ const Signup = ({
   const handleSubmit = async (e)=>{
     e.preventDefault()
     await signup(email, password , user)
-    navigate(`/${user}`)
 
   }
 
@@ -26,7 +25,7 @@ const Signup = ({
       <div className="frame-parent4">
         <div className="welcome-back-parent">
           <h1 className="welcome-back-container">
-            <span className="welcome-back">Welcome {user}</span>
+            <span className="welcome-back">welcome {user}</span>
             <span> 👋</span>
           </h1>
           <div className="today-is-a-container">
@@ -71,7 +70,7 @@ const Signup = ({
           </div>
 
           <button type="submit" disabled={isLoading}   className="main-button">
-            <div className="sign-in">Sign up</div>
+            <div className="sign-in">sign up</div>
           </button>
           {error && <div>{error}</div>}
         </form>

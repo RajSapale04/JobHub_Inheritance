@@ -1,104 +1,156 @@
 import { useState } from "react";
-import LastNameInput1 from "./LastNameInput1";
-import LastNameInput from "./LastNameInput";
+import axios from "axios";
 import "./Hero1.css";
+import "./LastNameInput1.css";
+import { useAuthContext } from "../hooks/useAuthContext"
+import { useNavigate } from "react-router-dom";
 
 const Hero1 = () => {
-  const [createAPasswordValue, setCreateAPasswordValue] = useState("");
+  const navigate = useNavigate();
+  const {user} = useAuthContext()
+  const [formdata,setformdata]= useState({
+    firstName:"",
+    lastName:"",
+    mobileNumber:"",
+    currentCity:"",
+    currentCountry:"",
+    workStatus:""
+  })
+  const [error, setError] = useState(null)
+  const [status, setStatus] = useState(null)
+
+  
+  const handleSubmit= async ()=>{
+    setError(null)
+    setStatus(null)
+    try {
+      const response = await axios.post("http://localhost:4000/user",formdata,{
+      headers:{
+        Authorization: `Bearer ${user.token}`
+      }
+  
+  
+    })
+    const json = response.data
+        if (response.status >= 200 && response.status<300){
+          setStatus("user profile created")
+          navigate(`/user-profile`)
+        
+        
+      }
+      else{
+        setError(json.error||"Some unexpected Error")
+      }
+
+      
+    } catch (error) {
+      setError(error.response.data.error)
+
+
+      
+    }
+    
+
+
+  }
+
+
+
   return (
     <form className="hero1">
       <div className="hero-item" />
       <div className="im-experienced-frame">
         <b className="time-to-grow1">Time to grow your career!</b>
       </div>
-      <LastNameInput1
-        firstName="First Name"
-        whatIsYourFirstNPlacehold="What is your first name?"
-      />
-      <LastNameInput1
-        firstName="Last Name"
-        whatIsYourFirstNPlacehold="What is your last name?"
-      />
-      <LastNameInput
-        emailID="Email ID"
-        whatIsYouEmailIDPlacehold="What is you Email ID?"
-        propHeight="25px"
-      />
-      <div className="last-name-input2">
-        <div className="password-min-6-characters-re-parent">
-          <div className="password-min-6-container2">
-            <span className="current-country">Password</span>
-            <span className="if-residing-outside">
-              {" "}
-              [Min. 6 characters required]
-            </span>
-          </div>
-          <div className="create-a-password-for-your-acc-container">
-            <input
-              className="create-a-password1"
-              placeholder="Create a password for your account "
-              type="text"
-              value={createAPasswordValue}
-              onChange={(event) => setCreateAPasswordValue(event.target.value)}
-            />
+    <div className="last-name-input">
+      <div className="password-field">
+        <div className="first-name">First Name</div>
+        <div className="registration-form">
+          <input
+            className="what-is-your"
+            placeholder="What is your first name?"
+            type="text"
+            value={formdata.firstName}
+            onChange={(event) => setformdata({...formdata,firstName:event.target.value})}
+          />
+        </div>
+      </div>
+    </div>
+    <div className="last-name-input">
+      <div className="password-field">
+        <div className="first-name">Last Name</div>
+        <div className="registration-form">
+          <input
+            className="what-is-your"
+            placeholder="What is your last name?"
+            type="text"
+            value={formdata.lastName}
+            onChange={(event) => setformdata({...formdata,lastName:event.target.value})}
+          />
+        </div>
+      </div>
+    </div>
+
+
+    <div className="last-name-input">
+      <div className="password-field">
+        <div className="first-name">Mobile Number</div>
+        <div className="registration-form">
+          <input
+            className="what-is-your"
+            placeholder="What is your mobile number?"
+            type="text"
+            value={formdata.mobileNumber}
+            onChange={(event) => setformdata({...formdata,mobileNumber:event.target.value})}
+          />
+        </div>
+      </div>
+    </div>
+      <div className="last-name-input">
+        <div className="password-field">
+          <div className="first-name">Current City</div>
+          <div className="registration-form">
+
+          
+          <input
+            className="what-is-your"
+            placeholder="Mention the current city you live in"
+            type="text"
+            value={formdata.currentCity}
+            onChange={(event) => setformdata({...formdata,currentCity:event.target.value})}
+          />
           </div>
         </div>
       </div>
-      <LastNameInput
-        emailID="Mobile Number"
-        whatIsYouEmailIDPlacehold="What is your mobile number?"
-        propWidth="137px"
-        propHeight="25px"
-      />
-      <div className="last-name-input2">
-        <div className="password-min-6-characters-re-parent">
-          <div className="current-city">Current City</div>
-          <button className="mention-the-current-city-you-l-container">
-            <div className="mention-the-current1">
-              Mention the current city you live in
-            </div>
-          </button>
+            <div className="last-name-input">
+        <div className="password-field">
+          <div className="first-name">Current Country</div>
+          <div className="registration-form">
+
+          
+          <input
+            className="what-is-your"
+            placeholder="Mention the current country you live in"
+            type="text"
+            value={formdata.currentCountry}
+            onChange={(event) => setformdata({...formdata,currentCountry:event.target.value})}
+          />
+          </div>
         </div>
       </div>
-      <div className="last-name-input2">
-        <div className="password-min-6-characters-re-parent">
-          <div className="current-country-if-container">
-            <span className="current-country-if-container1">
-              <span className="current-country">Current Country</span>
-              <span className="if-residing-outside">
-                {" "}
-                [If residing outside India]
-              </span>
-            </span>
-          </div>
-          <button className="mention-the-country-where-you-frame">
-            <div className="mention-the-current1">
-              Mention the country where you’re staying
-            </div>
-          </button>
-        </div>
-      </div>
-      <div className="register-button">
-        <div className="work-status">Work Status</div>
-        <div className="experienced-frame">
-          <div className="im-experienced-frame1">
-            <div className="im-experienced-i-container">
-              <span>
-                <p className="im-experienced">Im experienced</p>
-                <p className="i-have-work">I have work experience</p>
-                <p className="i-have-work">(excluding internships)</p>
-              </span>
-            </div>
-          </div>
-          <div className="im-experienced-frame1">
-            <div className="im-experienced-i-container">
-              <span>
-                <p className="im-experienced">Im a fresher</p>
-                <p className="i-have-work">
-                  I am a student/Have’nt worked after graduation
-                </p>
-              </span>
-            </div>
+      <div className="last-name-input">
+        <div className="password-field">
+          <div className="first-name">Work Status</div>
+          <div className="registration-form">
+
+          
+          <input
+            className="what-is-your"
+            placeholder="Fresher/Experienced"
+            type="text"
+            value={formdata.workStatus}
+            onChange={(event) => setformdata({...formdata,workStatus:event.target.value})}
+          />
           </div>
         </div>
       </div>
@@ -116,10 +168,15 @@ const Hero1 = () => {
         </div>
       </div>
       <div className="register2">
-        <div className="register3">Register</div>
+
+
+        <div className="register3" onClick={handleSubmit}>Register</div>
+
       </div>
+    {status && <div>{status}</div>}
+    {error && <div>{error}</div>}
     </form>
   );
 };
 
-export default Hero1;
+export default Hero1; 

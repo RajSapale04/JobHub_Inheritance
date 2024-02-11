@@ -1,11 +1,13 @@
 import { useState } from "react";
 import "./Navigation.css";
+import { useNavigate } from "react-router-dom";
 
 const Navigation = () => {
-  const [navLinkValue, setNavLinkValue] = useState("");
-  const [navLink1Value, setNavLink1Value] = useState("");
-  const [navLink2Value, setNavLink2Value] = useState("");
-  const [navLink3Value, setNavLink3Value] = useState("");
+  const navigate= useNavigate();
+  const handleClick=()=>{
+    navigate("/job-list")
+  }
+
   return (
     <section className="navigation2">
       <header className="navigation3">
@@ -14,20 +16,10 @@ const Navigation = () => {
             <div className="nav-link7">
               <div className="home3">Home</div>
             </div>
-            <div className="nav-link7">
-              <div className="home3">Find Jobs</div>
-            </div>
-            <div className="nav-link7">
-              <div className="home3">Find Employers</div>
-            </div>
+
+
             <div className="nav-link10">
               <div className="home4">Dashboard</div>
-            </div>
-            <div className="nav-link7">
-              <div className="home3">Job Alerts</div>
-            </div>
-            <div className="nav-link7">
-              <div className="home3">Customer Support</div>
             </div>
           </div>
           <div className="right-sidebar">
@@ -86,7 +78,8 @@ const Navigation = () => {
                   />
                 </div>
                 <div className="search-icon" />
-                <div className="favorite-jobs-frame">
+                <div className="favorite-jobs-frame"
+                onClick={handleClick}>
                   <img
                     className="fisearch-icon1"
                     loading="eager"

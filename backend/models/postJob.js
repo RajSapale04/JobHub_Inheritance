@@ -7,11 +7,7 @@ const postJob = new mongoose.Schema({
     type: String,
     required: true
   },
-  tags: {
-    type: String,
-    required: true
-  },
-  jobRole: {
+  companyName: {
     type: String,
     required: true
   },
@@ -21,10 +17,6 @@ const postJob = new mongoose.Schema({
   },
   maxSalary: {
     type: Number,
-    required: true
-  },
-  salaryType: {
-    type: String,
     required: true
   },
   education: {
@@ -43,14 +35,7 @@ const postJob = new mongoose.Schema({
     type: Number,
     required: true
   },
-  expirationDate: {
-    type: Date,
-    required: true
-  },
-  jobLevel: {
-    type: String,
-    required: true
-  },
+
   country: {
     type: String,
     required: true
@@ -59,18 +44,12 @@ const postJob = new mongoose.Schema({
     type: String,
     required: true
   },
-  jobBenefits: {
-    type: String,
-    required: true
-  },
+
   jobDescription: {
     type: String,
     required: true
   },
-  applyJob: {
-    type: String,
-    required: true
-  },
+
   company_id:{
     type: String,
     required: true

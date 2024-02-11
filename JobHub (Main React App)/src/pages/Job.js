@@ -1,4 +1,4 @@
-import Hero1 from "../components/Hero1";
+import Hero1 from "../components/post-job";
 import "./JobSeeker.css";
 
 const JobSeeker = () => {

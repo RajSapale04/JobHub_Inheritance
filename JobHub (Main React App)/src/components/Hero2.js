@@ -16,14 +16,14 @@ const Hero2 = () => {
       </div>
       <div className="employer-title">
         <div className="jobseeker-label">
-          <Link className="job-link" to={'/user/login'}>
+          <Link to={'/user/login'}>
 
           <div className="jobseeker1">Jobseeker</div>
           </Link>
         </div>
       </div>
       <div className="employer-container">
-        <Link className="job-link" to={'/company/login'}>
+        <Link to={'/company/login'}>
 
         <div className="jobseeker1">Employer</div>
         </Link>

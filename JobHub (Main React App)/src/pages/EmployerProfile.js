@@ -1,14 +1,79 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import FrameComponent1 from "../components/FrameComponent1";
 import FrameComponent from "../components/FrameComponent";
 import CopyRight from "../components/CopyRight";
 import "./EmployerProfile.css";
+import { useAuthContext } from "../hooks/useAuthContext"
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useLogout } from '../hooks/useLogout'
 
 const EmployerProfile = () => {
   const [overviewTextValue, setOverviewTextValue] = useState("");
   const [myJobsTextValue, setMyJobsTextValue] = useState("");
   const [plansBillingValue, setPlansBillingValue] = useState("");
   const [settingsTextValue, setSettingsTextValue] = useState("");
+  const { logout } = useLogout()
+  const navigate=useNavigate();
+  const [data, setData] = useState(null);
+  const {user} = useAuthContext();
+  const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleClick = () => {
+    logout();
+    navigate('/')
+  }
+    useEffect(()=>{
+    const fetchData=async()=>{
+
+      try {
+        const response = await axios.get("http://localhost:4000/company",{
+        headers:{
+            Authorization: `Bearer ${user.token}`
+          }
+        });
+        
+        const json = response.data;
+        if (response.status >= 200 && response.status<300){
+        setData(json[0]);
+        console.log(json[0]);
+        
+       
+
+
+        }
+        else if(json.error==="no such company found"){
+          navigate('/company');
+        }
+        else{
+          setError(json.error||"some unexpected Error");
+        }
+
+        
+      } catch (error) {
+        navigate('/company/login')
+        setError(error.response.data.error);
+        
+      } finally {
+        setIsLoading(false);
+      }
+
+    }
+    if(user){
+      fetchData()
+      
+      console.log(data)
+      
+    }
+
+
+
+
+
+  },[user])
+
+
   return (
     <div className="employer-profile">
       <FrameComponent1 />
@@ -81,53 +146,16 @@ const EmployerProfile = () => {
               </div>
             </div>
           </div>
-          <FrameComponent />
+         {data &&<FrameComponent {...data} />}
         </div>
-        <div className="logout-button">
-          <div className="div">
+        <div className="logout-button"
+        >
+          <div className="div" onClick={handleClick}>
             <div className="child" />
             <div className="profile-pic-rectangle" />
-            <h3 className="log-out">Log Out</h3>
+            <h3 className="log-out" onClick={handleClick}>Log Out</h3>
           </div>
-          <div className="job3-wrapper">
-            <div className="job3">
-              <div className="microsoft-logo" />
-              <div className="job-card">
-                <img
-                  className="microsoft-1-icon"
-                  alt=""
-                  src="/microsoft-1@2x.png"
-                />
-                <div className="front-end-developer-label">
-                  <div className="location-dot">
-                    <h3 className="front-end-developer">Front End Developer</h3>
-                    <div className="type">
-                      <div className="full-time">Full-Time</div>
-                    </div>
-                  </div>
-                  <div className="dhaka-text">
-                    <div className="mappin-parent">
-                      <img className="mappin-icon" alt="" src="/mappin.svg" />
-                      <div className="dhaka-bangladesh">Dhaka, Bangladesh</div>
-                    </div>
-                    <div className="expired">Expired</div>
-                  </div>
-                </div>
-              </div>
-              <div className="job3-child" />
-              <div className="applicant-list">
-                <div className="applicants">12 Applicants</div>
-              </div>
-              <div className="job3-inner">
-                <div className="expire-parent">
-                  <div className="expire">Expire</div>
-                  <button className="view-button">
-                    <div className="view-applications">View Applications</div>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </section>
       <CopyRight

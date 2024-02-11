@@ -10,26 +10,43 @@ const Navigation2 = () => {
   return (
     <header className="navigation7">
       <div className="search-box">
-      <div className="menu-button">
-            <div className="nav-link7">
-              <div className="home3">Home</div>
-            </div>
-            <div className="nav-link10">
-              <div className="home3">Find Jobs</div>
-            </div>
-            <div className="nav-link7">
-              <div className="home3">Find Employers</div>
-            </div>
-            <div className="nav-link7">
-              <div className="home4">Dashboard</div>
-            </div>
-            <div className="nav-link7">
-              <div className="home3">Job Alerts</div>
-            </div>
-            <div className="nav-link7">
-              <div className="home3">Customer Support</div>
-            </div>
-        
+        <div className="navbar-links">
+          <div className="nav-link21">
+            <div className="home11">Home</div>
+          </div>
+          <div className="nav-link22">
+            <input
+              className="home12"
+              placeholder="Find Job"
+              type="text"
+              value={homeText1Value}
+              onChange={(event) => setHomeText1Value(event.target.value)}
+            />
+          </div>
+          <input
+            className="nav-link23"
+            placeholder="Find Employers"
+            type="text"
+            value={navLinkValue}
+            onChange={(event) => setNavLinkValue(event.target.value)}
+          />
+          <div className="nav-link21">
+            <div className="home13">Dashboard</div>
+          </div>
+          <input
+            className="nav-link25"
+            placeholder="Job Alerts"
+            type="text"
+            value={navLink1Value}
+            onChange={(event) => setNavLink1Value(event.target.value)}
+          />
+          <input
+            className="nav-link26"
+            placeholder="Customer Supports"
+            type="text"
+            value={navLink2Value}
+            onChange={(event) => setNavLink2Value(event.target.value)}
+          />
         </div>
         <div className="employers-logo1">
           <div className="info-block">

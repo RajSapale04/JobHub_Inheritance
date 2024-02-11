@@ -1,77 +1,141 @@
 import { useState } from "react";
-import LastNameInput from "./LastNameInput";
+import  "./LastNameInput.css";
+import axios from "axios";
 import "./Hero.css";
+import { useAuthContext } from "../hooks/useAuthContext"
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
-  const [createAPasswordValue, setCreateAPasswordValue] = useState("");
+    const navigate = useNavigate();
+  const {user} = useAuthContext()
+   const [formdata,setformdata]= useState({
+    firstName:"",
+    lastName:"",
+    mobileNumber:"",
+    companyName:"",
+    registeredCountry:"",
+    
+  })
+    const [error, setError] = useState(null)
+  const [status, setStatus] = useState(null)
+    const handleSubmit= async ()=>{
+    setError(null)
+    setStatus(null)
+    try {
+      const response = await axios.post("http://localhost:4000/company",formdata,{
+      headers:{
+        Authorization: `Bearer ${user.token}`
+      }
+     
+  
+  
+    })
+        
+        const json = response.data
+        if (response.status >= 200 && response.status<300){
+          setStatus("user profile created")
+          navigate(`/company-profile`)
+        
+        
+      }
+      else{
+        setError(json.error||"Some unexpected Error")
+      }
+
+      
+    } catch (error) {
+      setError(error.response.data.error)
+
+
+      
+    }
+    
+
+
+  }
+
   return (
     <form className="hero">
       <div className="hero-child" />
       <div className="designation-position-frame">
         <b className="time-to-grow">Time to grow your company!</b>
       </div>
-      <LastNameInput
-        emailID="First Name"
-        whatIsYouEmailIDPlacehold="What is your first name?"
-        propWidth="194px"
-        propHeight="25px"
-      />
-      <LastNameInput
-        emailID="Last Name"
-        whatIsYouEmailIDPlacehold="What is your last name?"
-        propWidth="217px"
-        propHeight="25px"
-      />
-      <LastNameInput
-        emailID="Company Email ID"
-        whatIsYouEmailIDPlacehold="What is you Email ID?"
-        propWidth="394px"
-        propHeight="25px"
-      />
-      <div className="create-password-frame">
-        <div className="password-min-6-container">
-          <span className="password-min-6-container1">
-            <span className="password">Password</span>
-            <span className="min-6-characters">
-              {" "}
-              [Min. 6 characters required]
-            </span>
-          </span>
-        </div>
-        <div className="create-a-password-for-your-acc-wrapper">
-          <input
-            className="create-a-password"
-            placeholder="Create a password for your account "
-            type="text"
-            value={createAPasswordValue}
-            onChange={(event) => setCreateAPasswordValue(event.target.value)}
-          />
-        </div>
+          <div className="last-name-input1">
+      <div className="email-id" >
+        First Name
       </div>
-      <LastNameInput
-        emailID="Mobile Number"
-        whatIsYouEmailIDPlacehold="What is your mobile number?"
-        propWidth="298px"
-        propHeight="25px"
-      />
-     <LastNameInput
-        emailID="Company Name"
-        whatIsYouEmailIDPlacehold="What is your company name?"
-        propWidth="298px"
-        propHeight="25px"
-      />
-      <LastNameInput
-        emailID="Registered Country"
-        whatIsYouEmailIDPlacehold="What country are you registered in?"
-        propWidth="298px"
-        propHeight="25px"
-      />
-      <LastNameInput
-        emailID="Designation/Post Held"
-        whatIsYouEmailIDPlacehold="What is the designation/post you hold?"
-        propWidth="298px"
-        propHeight="25px"
-      />
+      <div className="career-growth-frame">
+        <input
+          className="what-is-you"
+          placeholder="What is your first name?"
+          type="text"
+          value={formdata.firstName}
+          onChange={(event) => setformdata({...formdata,firstName:event.target.value})}
+        />
+      </div>
+    </div>
+          <div className="last-name-input1">
+      <div className="email-id" >
+        Last Name
+      </div>
+      <div className="career-growth-frame">
+        <input
+          className="what-is-you"
+          placeholder="What is your last name?"
+          type="text"
+          value={formdata.lastName}
+          onChange={(event) => setformdata({...formdata,lastName:event.target.value})}
+        />
+      </div>
+    </div>
+         <div className="last-name-input1">
+      <div className="email-id" >
+        Mobile Number
+      </div>
+      <div className="career-growth-frame">
+        <input
+          className="what-is-you"
+          placeholder="What is your mobile Number"
+          type="text"
+          value={formdata.mobileNumber}
+          onChange={(event) => setformdata({...formdata,mobileNumber:event.target.value})}
+        />
+      </div>
+    </div>
+
+  
+    <div className="last-name-input1">
+      <div className="email-id" >
+        Company Name
+      </div>
+      <div className="career-growth-frame">
+        <input
+          className="what-is-you"
+          placeholder="What is your company name?"
+          type="text"
+          value={formdata.companyName}
+          onChange={(event) => setformdata({...formdata,companyName:event.target.value})}
+        />
+      </div>
+    </div>
+    <div className="last-name-input1">
+      <div className="email-id" >
+        Registered Country
+      </div>
+      <div className="career-growth-frame">
+        <input
+          className="what-is-you"
+          placeholder="What is your registered Company?"
+          type="text"
+          value={formdata.registeredCountry}
+          onChange={(event) => setformdata({...formdata,registeredCountry:event.target.value})}
+        />
+      </div>
+    </div>
+
+
+  
+ 
       <div className="create-password-frame">
         <div className="company-verification-documents">
           Company Verification Documents
@@ -86,8 +150,10 @@ const Hero = () => {
         </div>
       </div>
       <div className="register">
-        <div className="register1">Register</div>
+        <div className="register1" onClick={handleSubmit}>Register</div>
       </div>
+    {status && <div>{status}</div>}
+    {error && <div>{error}</div>}
     </form>
   );
 };

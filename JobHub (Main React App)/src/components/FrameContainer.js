@@ -1,9 +1,28 @@
 import { useState } from "react";
 import Job2 from "./Job2";
 import "./FrameContainer.css";
-import { Link } from "react-router-dom";
 
-const FrameContainer = () => {
+const FrameContainer = ({data}) => {
+  console.log("Data:", data);
+
+  const Job= data.map((e)=>(
+    <Job2 
+    id={e._id}
+    key={e._id}
+    techicalSupportSpecialist={e.jobTitle}
+    employersLogo="/employers-logo.svg"
+    mapPin="/mappin.svg"
+    bookmarkSimple="/bookmarksimple-11.svg"
+    propBackground="unset"
+    propBackgroundColor="#fff"
+    minSalary={e.minSalary}
+    maxSalary={e.maxSalary}
+    companyName={e.companyName}
+    city={e.city}
+    country={e.country}
+    partTime={e.jobType}
+    />
+  ));
   const [searchByJobValue, setSearchByJobValue] = useState("");
   const [cityStateOrValue, setCityStateOrValue] = useState("");
   return (
@@ -42,17 +61,15 @@ const FrameContainer = () => {
         </button>
       </form>
       <div className="google-inc2">
-        <Link className="job-link" to="/job-detail">
-        <Job2
+        {data && Job}
+        {/* <Job2
           techicalSupportSpecialist="Techical Support Specialist"
           partTime="Part-time"
           employersLogo="/employers-logo.svg"
           mapPin="/mappin.svg"
           bookmarkSimple="/bookmarksimple-11.svg"
           propBackground="linear-gradient(90deg, #d2d3e0, #fff), #fff"
-        /></Link>
-                <Link className="job-link" to="/job-detail">
-
+        />
         <Job2
           techicalSupportSpecialist="Senior UX Designer"
           partTime="Full-Time"
@@ -61,9 +78,7 @@ const FrameContainer = () => {
           bookmarkSimple="/bookmarksimple-11.svg"
           propBackground="linear-gradient(90deg, #d2d3e0, #fff), #fff"
           propBackgroundColor="unset"
-        /></Link>
-                <Link className="job-link" to="/job-detail">
-
+        />
         <Job2
           techicalSupportSpecialist="Marketing Officer"
           partTime="Internship"
@@ -72,7 +87,7 @@ const FrameContainer = () => {
           bookmarkSimple="/bookmarksimple-11.svg"
           propBackground="unset"
           propBackgroundColor="#fff"
-        /></Link>
+        />
         <Job2
           techicalSupportSpecialist="Junior Graphic Designer"
           partTime="Internship"
@@ -82,8 +97,6 @@ const FrameContainer = () => {
           propBackground="unset"
           propBackgroundColor="#fff"
         />
-                <Link className="job-link" to="/job-detail">
-
         <Job2
           techicalSupportSpecialist="Interaction Designer"
           partTime="Part-time"
@@ -92,9 +105,7 @@ const FrameContainer = () => {
           bookmarkSimple="/bookmarksimple-11.svg"
           propBackground="unset"
           propBackgroundColor="#fff"
-        /></Link>
-                <Link className="job-link" to="/job-detail">
-
+        />
         <Job2
           techicalSupportSpecialist="Project Manager"
           partTime="Full-Time"
@@ -103,9 +114,7 @@ const FrameContainer = () => {
           bookmarkSimple="/bookmarksimple-11.svg"
           propBackground="unset"
           propBackgroundColor="#fff"
-        /></Link>
-                <Link className="job-link" to="/job-detail">
-
+        />
         <Job2
           techicalSupportSpecialist="Software Engineer"
           partTime="Full-Time"
@@ -114,9 +123,7 @@ const FrameContainer = () => {
           bookmarkSimple="/bookmarksimple-11.svg"
           propBackground="unset"
           propBackgroundColor="#fff"
-        /></Link>
-                <Link className="job-link" to="/job-detail">
-
+        />
         <Job2
           techicalSupportSpecialist="Visual Designer"
           partTime="Full-Time"
@@ -125,9 +132,7 @@ const FrameContainer = () => {
           bookmarkSimple="/bookmarksimple-11.svg"
           propBackground="unset"
           propBackgroundColor="#fff"
-        /></Link>
-                <Link className="job-link" to="/job-detail">
-
+        />
         <Job2
           techicalSupportSpecialist="Project Manager"
           partTime="Full-Time"
@@ -136,9 +141,7 @@ const FrameContainer = () => {
           bookmarkSimple="/bookmarksimple-11.svg"
           propBackground="linear-gradient(90deg, #d5d2e0, #fff), #fff"
           propBackgroundColor="unset"
-        /></Link>
-                <Link className="job-link" to="/job-detail">
-
+        />
         <Job2
           techicalSupportSpecialist="UI/UX Designer"
           partTime="Full-Time"
@@ -147,9 +150,7 @@ const FrameContainer = () => {
           bookmarkSimple="/bookmarksimple-11.svg"
           propBackground="unset"
           propBackgroundColor="#fff"
-        /></Link>
-                <Link className="job-link" to="/job-detail">
-
+        />
         <Job2
           techicalSupportSpecialist="Product Designer"
           partTime="Full-Time"
@@ -158,9 +159,7 @@ const FrameContainer = () => {
           bookmarkSimple="/bookmarksimple-11.svg"
           propBackground="unset"
           propBackgroundColor="#fff"
-        /></Link>
-                <Link className="job-link" to="/job-detail">
-
+        />
         <Job2
           techicalSupportSpecialist="Networking Engineer"
           partTime="Internship"
@@ -169,9 +168,7 @@ const FrameContainer = () => {
           bookmarkSimple="/bookmarksimple-11.svg"
           propBackground="unset"
           propBackgroundColor="#fff"
-        /></Link>
-                <Link className="job-link" to="/job-detail">
-
+        />
         <Job2
           techicalSupportSpecialist="Front End Developer"
           partTime="Part-time"
@@ -180,9 +177,7 @@ const FrameContainer = () => {
           bookmarkSimple="/bookmarksimple-11.svg"
           propBackground="unset"
           propBackgroundColor="#fff"
-        /></Link>
-                <Link className="job-link" to="/job-detail">
-
+        />
         <Job2
           techicalSupportSpecialist="Senior UX Designer"
           partTime="Full-Time"
@@ -191,9 +186,7 @@ const FrameContainer = () => {
           bookmarkSimple="/bookmarksimple-11.svg"
           propBackground="unset"
           propBackgroundColor="#fff"
-        /></Link>
-                <Link className="job-link" to="/job-detail">
-
+        />
         <Job2
           techicalSupportSpecialist="Marketing Manager"
           partTime="Internship"
@@ -202,7 +195,7 @@ const FrameContainer = () => {
           bookmarkSimple="/bookmarksimple-11.svg"
           propBackground="unset"
           propBackgroundColor="#fff"
-        /></Link>
+        /> */}
       </div>
       <div className="pagination">
         <div className="icon-button1">

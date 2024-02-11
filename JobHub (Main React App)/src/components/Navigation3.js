@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "./Navigation3.css";
 
 const Navigation3 = ({
@@ -19,9 +18,7 @@ const Navigation3 = ({
             alt=""
             src={briefcase1}
           />
-          <Link className="job-link" to="/">
-            <h2 className="jobpilot4">JobHub</h2>
-          </Link>
+          <h2 className="jobpilot4">JobHub</h2>
         </div>
         <div className="search2">
           <div className="parent-container">

@@ -3,6 +3,7 @@ const Company = require('../models/companyModel')
 const CompanyProfile= require('../models/companySignUp')
 const Job = require('../models/postJob')
 const User = require('../models/UserSignUp')
+const mongoose = require('mongoose')
 
 const createToken=(_id)=>{
     return jwt.sign({_id},process.env.SECRETC,{expiresIn:'1d'})
@@ -41,9 +42,12 @@ const signupCompany = async (req,res) =>{
 
 const createCompany = async (req,res)=>{
     const company_id= req.user._id
+    const _id = new mongoose.Types.ObjectId(company_id)
 
     try {
-        const company = await CompanyProfile.create({...req.body,company_id})
+        const companyS = await Company.findById({_id})
+        const email = companyS.email
+        const company = await CompanyProfile.create({...req.body,email,company_id})
         res.status(200).json(company)
     } catch (error) {
         res.status(400).json({error:error.message})
