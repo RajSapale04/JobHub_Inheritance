@@ -21,7 +21,7 @@ export const useSignup = () => {
       if (response.status >= 200 && response.status < 300) {
         localStorage.setItem('user', JSON.stringify(json));
         dispatch({ type: 'LOGIN', payload: json });
-        navigate(`/${user}-profile`)
+        navigate(`/${user}`)
       } else {
         setError(json.error || 'An unknown error occurred');
       }
