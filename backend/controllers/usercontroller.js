@@ -1,4 +1,4 @@
-const User =require('../models/userModel')
+const User =require('../models/UserModel')
 const jwt = require('jsonwebtoken')
 const UserProfile = require('../models/UserSignUp')
 const Job = require('../models/postJob')
@@ -17,7 +17,7 @@ const loginUser = async (req,res) =>{
     //create token
     const token = createToken(user._id)
 
-    res.status(200).json({email,token})
+    res.status(200).json({id:user._id,token})
     } catch(error){
         res.status(400).json({error: error.message})
 
@@ -33,7 +33,7 @@ const signupUser = async (req,res) =>{
         //create token
         const token = createToken(user._id)
 
-        res.status(200).json({email,token})
+        res.status(200).json({id:user._id,token})
     } catch(error){
         res.status(400).json({error: error.message})
         console.log(error)
@@ -60,10 +60,12 @@ const createUser = async (req,res)=>{
 const getUser = async(req,res)=>{
     const user_id = req.user._id
     const user = await UserProfile.find({user_id})
-    if(!user){
+    if(user.length ===0){
+
         return res.status(404).json({error:"no such user found"})
     }
     res.status(200).json(user)
+
 }
 const deleteUser=async(req,res)=>{
     try {

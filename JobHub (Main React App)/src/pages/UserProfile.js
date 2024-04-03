@@ -20,9 +20,6 @@ const UserProfile = () => {
     logout();
     navigate('/')
   }
-
-
-
   useEffect(()=>{
     const fetchData=async()=>{
 
@@ -32,18 +29,11 @@ const UserProfile = () => {
             Authorization: `Bearer ${user.token}`
           }
         });
-        
+
         const json = response.data;
         if (response.status >= 200 && response.status<300){
         setData(json[0]);
-        console.log(json[0]);
-        
-       
-
-
-        }
-        else if(json.error==="no such user found"){
-          navigate('/user');
+ 
         }
         else{
           setError(json.error||"some unexpected Error");
@@ -51,8 +41,15 @@ const UserProfile = () => {
 
         
       } catch (error) {
-        navigate('/user/login')
-        setError(error.response.data.error);
+        if(error.response.data.error==="no such user found"){
+          navigate('/user');
+        }
+        else{
+
+          navigate('/user/login')
+
+          setError(error.response.data.error);
+        }
         
       } finally {
         setIsLoading(false);
@@ -61,8 +58,7 @@ const UserProfile = () => {
     }
     if(user){
       fetchData()
-      
-      console.log(data)
+
       
     }
 
@@ -152,7 +148,8 @@ const UserProfile = () => {
               </div>
             </div>
           </div>
-          {data&& <StatusActionFrame {...data}/>}
+          {data && <StatusActionFrame {...data}/>}
+          {data && console.log(data)}
         </div>
         <div className="main-navigation">
           <div className="top-bar" onClick={handleClick}  >

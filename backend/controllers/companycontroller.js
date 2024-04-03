@@ -59,7 +59,7 @@ const createCompany = async (req,res)=>{
 const getCompany= async(req,res)=>{
     const company_id = req.user._id
     const company = await CompanyProfile.find({company_id})
-    if(!company){
+    if(company.length===0){
         return res.status(404).json({error:"no such company found"})
     }
     res.status(200).json(company)

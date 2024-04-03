@@ -1,6 +1,8 @@
 import "./ContactChild.css";
 
-const ContactChild = () => {
+const ContactChild = ({
+  description
+}) => {
   return (
     <div className="contact-child">
       <div className="container">
@@ -8,11 +10,10 @@ const ContactChild = () => {
       </div>
       <div className="velstar-is-a-shopify-plus-agen-wrapper">
         <div className="velstar-is-a">
-          Velstar is a Shopify Plus agency, and we partner with brands to help
-          them grow, we also do the same with our people!
+      {description}
         </div>
       </div>
-      <div className="velstar-is-a-shopify-plus-agen-wrapper">
+      {/* <div className="velstar-is-a-shopify-plus-agen-wrapper">
         <div className="here-at-velstar">{`Here at Velstar, we don't just make websites, we create exceptional digital experiences that consumers love. Our team of designers, developers, strategists, and creators work together to push brands to the next level. From Platform Migration, User Experience & User Interface Design, to Digital Marketing, we have a proven track record in delivering outstanding eCommerce solutions and driving sales for our clients.`}</div>
       </div>
       <div className="velstar-is-a-shopify-plus-agen-wrapper">
@@ -22,8 +23,8 @@ const ContactChild = () => {
         <div className="want-to-work">
           Want to work with us? You're in good company!
         </div>
-      </div>
-      <div className="requirements-parent">
+      </div> */}
+      {/* <div className="requirements-parent">
         <div className="requirements">Requirements</div>
         <div className="great-troubleshooting-and-container">
           <ul className="great-troubleshooting-and-anal">
@@ -112,7 +113,7 @@ const ContactChild = () => {
             of this exciting story.
           </li>
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 };

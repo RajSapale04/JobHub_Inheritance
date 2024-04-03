@@ -16,7 +16,7 @@ const Hero = () => {
     registeredCountry:"",
     
   })
-    const [error, setError] = useState(null)
+  const [error, setError] = useState(null)
   const [status, setStatus] = useState(null)
     const handleSubmit= async ()=>{
     setError(null)

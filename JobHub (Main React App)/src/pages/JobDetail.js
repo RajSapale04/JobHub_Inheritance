@@ -3,11 +3,125 @@ import ContactChild from "../components/ContactChild";
 import Info from "../components/Info";
 import FooterLinkContact from "../components/FooterLinkContact";
 import "./JobDetail.css";
+import { useState,useEffect } from "react";
+import axios from "axios";
+import { useAuthContext } from "../hooks/useAuthContext";
+import { useNavigate, useParams } from "react-router-dom";
 
 const JobDetail = () => {
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const{user}= useAuthContext()
+  const navigate=useNavigate()
+  const id = useParams().id
+  const [isApplied, setIsApplied] = useState(false);
+
+ 
+  const handleClick=async()=>{
+    console.log("User:", user);
+    console.log("Data:", data);
+    await fetchData(); // Call fetchData function
+    console.log("Data after fetch:", data);
+
+    if (!isApplied){
+      try {
+        const response = await axios.post(`http://localhost:4000/user/jobs/${id}`,null,{
+        headers:{
+          Authorization: `Bearer ${user.token}`
+        }
+      })   
+          const json = response.data
+          if (response.status >= 200 && response.status<300){
+            setIsApplied(true);
+            alert("Succesfully applied for job")
+          }else{
+            alert(json.error||"Some unexpected Error")
+          }
+  
+      } catch (error) {
+        alert(error.response.data.error)
+   
+      }
+    }
+    else{
+      try {
+        const response = await axios.delete(`http://localhost:4000/user/jobs/${id}`,{
+        headers:{
+          Authorization: `Bearer ${user.token}`
+        } 
+      })
+          
+          const json = response.data
+          if (response.status >= 200 && response.status<300){
+            setIsApplied(false);
+            alert("Succesfully unapplied from job")
+    
+        }
+        else{
+          alert(json.error||"Some unexpected Error")
+        }
+       
+      } catch (error) {
+        alert(error.response.data.error)
+        
+      }
+
+    }
+    
+  }
+
+  const fetchData=async()=>{
+
+    try {
+      const response = await axios.get(`http://localhost:4000/user/jobs/${id}`,{
+      headers:{
+          Authorization: `Bearer ${user.token}`
+        }
+      });
+
+      const json = response.data;
+      if (response.status >= 200 && response.status<300){
+      setData(json[0]);
+
+
+      }
+      else{
+        setError(json.error||"some unexpected Error");
+      }
+
+      
+    } catch (error) {
+
+      
+      setError(error.response.data.error);
+      // navigate('/user/login')
+      
+      
+    } finally {
+      setIsLoading(false);
+    }
+  }
+  useEffect(()=>{
+    fetchData()
+
+    
+  },[user,id])
+  useEffect(() => {
+    if (data && data.user_id.includes(user.id)) {
+      setIsApplied(true);
+    } else {
+      setIsApplied(false);
+    }
+  }, [data, user]);
+
   return (
     <div className="job-detail">
-      <Navigation1 />
+
+      <Navigation1 
+      
+      />
+
       <section className="quick-links-section">
         <div className="breadcrumb">
           <div className="label">Job Details</div>
@@ -43,12 +157,12 @@ const JobDetail = () => {
             />
             <div className="job-info-box">
               <div className="heading">
-                <h2 className="senior-ux-designer">Senior UX Designer</h2>
+                <h2 className="senior-ux-designer">{data && data.jobTitle}</h2>
               </div>
               <div className="map-trifold">
-                <div className="at-facebook">at Facebook</div>
+                <div className="at-facebook">at {data && data.companyName}</div>
                 <button className="line">
-                  <div className="full-time2">FULL-TIME</div>
+                  <div className="full-time2">{data && data.jobType}</div>
                 </button>
                 <button className="badge">
                   <div className="featured">Featured</div>
@@ -65,24 +179,33 @@ const JobDetail = () => {
                 src="/bookmarksimple1.svg"
               />
             </div>
-            <button className="button">
-              <div className="primary">Apply now</div>
+            {data && (
+
+              <button className="button" onClick={handleClick}>
+              <div className="primary">{isApplied ? "Unapply Now" : "Apply Now"}</div>
               <img
                 className="fiarrow-right-icon"
                 alt=""
                 src="/fiarrowright.svg"
-              />
+                />
             </button>
+                )}
           </div>
         </div>
         <div className="call-now">
-          <ContactChild />
+          {data && (
+
+            <ContactChild 
+            description={data.jobDescription}
+            
+            />
+            )}
           <div className="map-trifold-instance">
             <div className="salary-location">
               <div className="job-overview-frame">
                 <div className="salary-usd">Salary (USD)</div>
                 <div className="info-text-node">
-                  <div className="div6">$100,000 - $120,000</div>
+                  <div className="div6">${data && data.minSalary} - ${data && data.maxSalary}</div>
                   <div className="yearly-salary">Yearly salary</div>
                 </div>
               </div>
@@ -96,14 +219,14 @@ const JobDetail = () => {
                 />
                 <div className="logo-frame">
                   <div className="salary-usd">Job Location</div>
-                  <div className="dhaka-bangladesh2">Dhaka, Bangladesh</div>
+                  <div className="dhaka-bangladesh2">{data && data.city}, {data && data.country}</div>
                 </div>
               </div>
             </div>
             <div className="job-information">
               <div className="contact-text">
                 <div className="job-overview">Job Overview</div>
-                <div className="blog-link">
+                {/* <div className="blog-link">
                   <Info
                     calendarBlank="/calendarblank.svg"
                     jobPosted="Job Posted:"
@@ -124,23 +247,26 @@ const JobDetail = () => {
                     propMinWidth="109px"
                     propOverflow="unset"
                   />
-                </div>
-                <div className="experience-education-info">
+                </div> */}
+                {data && (
+
+                  <div className="experience-education-info">
                   <Info
                     calendarBlank="/wallet.svg"
                     jobPosted="Experience"
-                    jun2021="$50k-80k/month"
+                    jun2021={data.experience}
                     propMinWidth="unset"
                     propOverflow="unset"
-                  />
+                    />
                   <Info
                     calendarBlank="/briefcase.svg"
                     jobPosted="Education"
-                    jun2021="Graduation"
+                    jun2021={data.education}
                     propMinWidth="unset"
                     propOverflow="hidden"
-                  />
+                    />
                 </div>
+                    )}
               </div>
               <div className="line-separator" />
               <div className="share-this-job-parent">

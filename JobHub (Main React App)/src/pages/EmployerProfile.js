@@ -43,18 +43,21 @@ const EmployerProfile = () => {
 
 
         }
-        else if(json.error==="no such company found"){
-          navigate('/company');
-        }
+
         else{
           setError(json.error||"some unexpected Error");
         }
 
         
       } catch (error) {
+        
+        if(error.response.data.error==="no such company found"){
+          navigate('/company');
+        }
+        else{
         navigate('/company/login')
         setError(error.response.data.error);
-        
+        }
       } finally {
         setIsLoading(false);
       }

@@ -1,8 +1,15 @@
 import Job from "./Job";
 import "./StatusActionFrame.css";
 
+
 const StatusActionFrame = ({firstName,lastName,jobs,currentCity}
-) => {
+  ) => {
+  const Joblist = jobs.map((e)=>(
+    <Job 
+    id={e}
+    key={e}
+    />
+  ));
   return (
     <div className="status-action-frame5">
       <div className="search-button">
@@ -102,16 +109,19 @@ const StatusActionFrame = ({firstName,lastName,jobs,currentCity}
           <div className="frame-parent-child" />
           <div className="job4">Job</div>
           <div className="view-job-details">
-            <div className="status-text">
+            {/* <div className="status-text">
               <div className="date-applied">Date Applied</div>
-            </div>
+            </div> */}
             <div className="status2">Status</div>
             <div className="action1">Action</div>
           </div>
         </div>
       </div>
-      <Job mapPin="/mappin.svg" />
-      <Job mapPin="/mappin.svg" />
+      {jobs && console.log('hello')}
+      {jobs && Joblist}
+
+      {/* <Job mapPin="/mappin.svg" />
+      <Job mapPin="/mappin.svg" /> */}
     </div>
   );
 };

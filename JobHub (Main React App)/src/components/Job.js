@@ -1,6 +1,62 @@
 import "./Job.css";
+import { useState,useEffect } from "react";
+import axios from "axios";
+import { useAuthContext } from "../hooks/useAuthContext";
+import { useNavigate } from "react-router-dom";
+const Job = ({id}) => {
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const{user}= useAuthContext()
+  console.log(`http://localhost:4000/user/jobs/${id}`)
+  const navigate=useNavigate()
+  const handleClick=()=>{
+    navigate(`/job-detail/${id}`)
+  }
+  const fetchData=async()=>{
 
-const Job = ({ mapPin }) => {
+    try {
+      const response = await axios.get(`http://localhost:4000/user/jobs/${id}`,{
+      headers:{
+          Authorization: `Bearer ${user.token}`
+        }
+      });
+
+      const json = response.data;
+      if (response.status >= 200 && response.status<300){
+      setData(json[0]);
+      console.log(data)
+
+
+
+      
+     
+
+
+      }
+      else{
+        setError(json.error||"some unexpected Error");
+      }
+
+      
+    } catch (error) {
+
+        navigate('/user/login')
+
+        setError(error.response.data.error);
+      
+      
+    } finally {
+      setIsLoading(false);
+    }
+  }
+  useEffect(()=>{
+
+    fetchData()
+  },[user])
+
+
+
   return (
     <div className="job11">
       <div className="job1-inner" />
@@ -15,33 +71,33 @@ const Job = ({ mapPin }) => {
           />
           <div className="job-card-frame1">
             <div className="front-end-developer-group">
-              <h3 className="front-end-developer4">Front End Developer</h3>
+              <h3 className="front-end-developer4">{data && data.jobTitle }</h3>
               <div className="type5">
-                <div className="full-time5">Full-Time</div>
+                <div className="full-time5">{data && data.jobType}</div>
               </div>
             </div>
+        
             <div className="frame-container1">
               <div className="view-all-button1">
                 <img
                   className="mappin-icon4"
                   loading="eager"
                   alt=""
-                  src={mapPin}
                 />
-                <div className="dhaka-bangladesh5">Dhaka, Bangladesh</div>
+                <div className="dhaka-bangladesh5">{data && data.city}, {data && data.country}</div>
               </div>
-              <div className="salary-20000-1">Salary: $20,000 - $25,000</div>
+              <div className="salary-20000-1">Salary: ${data && data.minSalary} - ${data && data.maxSalary}</div>
             </div>
           </div>
         </div>
-        <div className="employer2">
+        {/* <div className="employer2">
           <div className="feb-2-20231">Feb 2, 2023 20:45</div>
-        </div>
+        </div> */}
       </div>
       <div className="active-status1">
         <div className="active-group">
           <div className="active8">Active</div>
-          <button className="view-button4">
+          <button className="view-button4" onClick={handleClick}>
             <div className="view-details1">View Details</div>
           </button>
         </div>
